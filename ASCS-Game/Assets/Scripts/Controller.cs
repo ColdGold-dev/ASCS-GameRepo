@@ -1,41 +1,49 @@
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
+
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class PlayerMovement2D : MonoBehaviour
 {
-    // ─────────────── INPUT ───────────────
-    [Header("Input Actions (drag from .inputactions asset)")]
+    //debug will be removed in final production version
+    [Header("Debug")]
+    [SerializeField] GameObject debugGroundCheck;
+    [SerializeField] GameObject CrouchCheck;
+
+
+
+    [Header("InputAction")]
     [SerializeField] InputActionReference moveAction;
     [SerializeField] InputActionReference jumpAction;
+    [SerializeField] InputActionReference crouchAction;
+    [SerializeField] InputActionReference sprintAction;
 
-    // ───────────── MOVEMENT ──────────────
     [Header("Movement")]
     [SerializeField] float moveSpeed = 8f;
+    [SerializeField] float sprintMultiplier = 1.5f;
 
-    // ───────────── JUMPING ───────────────
     [Header("Jumping")]
-    [SerializeField] float jumpForce = 14f;
-    [SerializeField] float jumpCutMultiplier = 0.5f;
+    [SerializeField] float jumpForce;
     [SerializeField] float jumpBufferTime = 0.2f; // Time window for jump buffering
     [SerializeField] float coyoteTime = 0.1f; // Time window for coyote time
 
-    // ───────────── GROUNDING ─────────────
     [SerializeField] LayerMask groundMask;
     [Tooltip("How far below the feet to look for ground")]
     [SerializeField] float groundCheckDistance = 0.05f;
 
-    // ─────────── PRIVATE STATE ───────────
     Rigidbody2D rb;
-    Collider2D  col;
+    Collider2D col;
     Vector2 input;
-    bool jumpPressed;
-    bool jumpHeld;
-    bool facingRight = true;
-    float lastGroundedTime;
-    float lastJumpPressTime;
+    //bool jumpHeld;
+    bool crouchHeld;
+    bool sprintHeld;
+    bool isGrounded;
+    float lastGroundedTime = -100f;
+    float lastJumpPressTime = -100f;
 
-    /* ───────────── LIFECYCLE ───────────── */
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,63 +54,28 @@ public class PlayerMovement2D : MonoBehaviour
     {
         moveAction.action.Enable();
         jumpAction.action.Enable();
+        crouchAction.action.Enable();
+        sprintAction.action.Enable();
     }
-    
+
     void OnDisable()
     {
         moveAction.action.Disable();
         jumpAction.action.Disable();
+        crouchAction.action.Disable();
+        sprintAction.action.Disable();
     }
 
     void Update()
     {
-        // Read input
-        input = moveAction.action.ReadValue<Vector2>();
-        
-        // Handle jump input
-        if (jumpAction.action.WasPressedThisFrame())
-        {
-            jumpPressed = true;
-            lastJumpPressTime = Time.time;
-        }
-        
-        jumpHeld = jumpAction.action.IsPressed();
+        IsGrounded();
+        lefRightMovement();
+        crouchManager();
+        sprintManager();
+        jumpControl();
     }
-
-    void FixedUpdate()
-    {
-        // Ground check
-        bool grounded = IsGrounded();
-        if (grounded)
-        {
-            lastGroundedTime = Time.time;
-        }
-
-        // Horizontal movement
-        rb.linearVelocity = new Vector2(input.x * moveSpeed, rb.linearVelocity.y);
-
-        // Jump handling with buffer and coyote time
-        bool canJump = (Time.time - lastGroundedTime <= coyoteTime) && 
-                      (Time.time - lastJumpPressTime <= jumpBufferTime);
-        
-        if (canJump)
-        {
-            // Jump force
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            
-            // Reset jump state
-            jumpPressed = false;
-            lastJumpPressTime = 0;
-        }
-
-        // Optional: Jump cut (short hop)
-        if (jumpHeld == false && rb.linearVelocity.y > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
-        }
-    }
-
-    bool IsGrounded()
+    //To Do add more raycasts
+    void IsGrounded()
     {
         // Cast straight down from just inside the bottom of the collider
         Vector2 origin = (Vector2)transform.position +
@@ -110,7 +83,67 @@ public class PlayerMovement2D : MonoBehaviour
 
         // Visualize the ray in scene view
         Debug.DrawRay(origin, Vector2.down * groundCheckDistance, Color.red);
-        
-        return Physics2D.Raycast(origin, Vector2.down, groundCheckDistance, groundMask);
+
+        isGrounded = Physics2D.Raycast(origin, Vector2.down, groundCheckDistance, groundMask);
     }
+
+    void jumpControl()
+    {
+        if (jumpAction.action.WasPressedThisFrame())
+        {
+            lastJumpPressTime = Time.time;
+        }
+        //bool grounded = IsGrounded();
+        if (isGrounded)
+        {
+            lastGroundedTime = Time.time;
+
+        }
+
+        bool canJump = (Time.time - lastGroundedTime < coyoteTime) &&
+                      (Time.time - lastJumpPressTime < jumpBufferTime);
+
+        //Jump If CanJump is true
+        if (canJump)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            lastJumpPressTime = 0;
+            lastGroundedTime = 0;
+
+        }
+        //Debug
+        debugGroundCheck.SetActive(isGrounded);
+    }
+
+
+    void lefRightMovement()
+    {
+        input = moveAction.action.ReadValue<Vector2>();
+        rb.linearVelocity = new Vector2(input.x * moveSpeed * speedManager(), rb.linearVelocity.y);
+    }
+
+    void crouchManager()
+    {
+        crouchHeld = crouchAction.action.IsPressed();
+
+        //debug
+        CrouchCheck.SetActive(crouchHeld);
+    }
+    void sprintManager()
+    {
+        sprintHeld = sprintAction.action.IsPressed();
+
+    }
+
+    float speedManager()
+    {
+        if (sprintHeld && isGrounded)
+        {
+            return sprintMultiplier;
+        }
+        //Normal Speed
+        return 1;
+    }
+
+
 }
