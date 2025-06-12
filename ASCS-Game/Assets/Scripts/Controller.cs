@@ -1,149 +1,186 @@
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
-
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class PlayerMovement2D : MonoBehaviour
 {
-    //debug will be removed in final production version
+    #region Debug
     [Header("Debug")]
-    [SerializeField] GameObject debugGroundCheck;
-    [SerializeField] GameObject CrouchCheck;
+    [SerializeField] private GameObject debugGroundCheck;
+    [SerializeField] private GameObject debugCrouchCheck;
+    #endregion
 
+    #region Input Actions
+    [Header("Input Actions")]
+    [SerializeField] private InputActionReference moveAction;
+    [SerializeField] private InputActionReference jumpAction;
+    [SerializeField] private InputActionReference crouchAction;
+    [SerializeField] private InputActionReference sprintAction;
+    [SerializeField] private InputActionReference attackAction;
+    #endregion
 
+    #region Movement Settings
+    [Header("Movement Settings")]
+    [SerializeField, Range(1f, 20f)] private float moveSpeed = 8f;
+    [SerializeField, Range(1f, 3f)] private float sprintMultiplier = 1.5f;
+    [SerializeField, Range(0.1f, 1f)] private float crouchSpeedMultiplier = 0.5f;
+    [SerializeField, Range(0.1f, 2f)] private float attackTime = 0.5f;
+    #endregion
 
-    [Header("InputAction")]
-    [SerializeField] InputActionReference moveAction;
-    [SerializeField] InputActionReference jumpAction;
-    [SerializeField] InputActionReference crouchAction;
-    [SerializeField] InputActionReference sprintAction;
+    #region Jump Settings
+    [Header("Jump Settings")]
+    [SerializeField, Range(1f, 30f)] private float jumpForce = 10f;
+    [SerializeField] private LayerMask groundMask;
+    [SerializeField, Tooltip("How far below the feet to look for ground")]
+    private float groundCheckDistance = 0.05f;
+    #endregion
 
-    [Header("Movement")]
-    [SerializeField] float moveSpeed = 8f;
-    [SerializeField] float sprintMultiplier = 1.5f;
+    private Rigidbody2D playerRigidbody;
+    private Collider2D playerCollider;
+    private Vector2 movementInput;
+    private bool isCrouching;
+    private bool isSprinting;
+    private bool isGrounded;
+    private float currentSpeedMultiplier = 1f;
+    private Attacks attackHandler;
 
-    [Header("Jumping")]
-    [SerializeField] float jumpForce;
-    [SerializeField] float jumpBufferTime = 0.2f; // Time window for jump buffering
-    [SerializeField] float coyoteTime = 0.1f; // Time window for coyote time
-
-    [SerializeField] LayerMask groundMask;
-    [Tooltip("How far below the feet to look for ground")]
-    [SerializeField] float groundCheckDistance = 0.05f;
-
-    Rigidbody2D rb;
-    Collider2D col;
-    Vector2 input;
-    //bool jumpHeld;
-    bool crouchHeld;
-    bool sprintHeld;
-    bool isGrounded;
-    float lastGroundedTime = -100f;
-    float lastJumpPressTime = -100f;
-
-
-
-    void Awake()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<Collider2D>();
+        playerRigidbody = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<Collider2D>();
+
+        // Automatically find the Attacks component in children
+        attackHandler = GetComponentInChildren<Attacks>();
+        if (attackHandler == null)
+        {
+            Debug.LogError("No Attacks component found in children!");
+        }
+
+#if UNITY_EDITOR
+        if (debugGroundCheck) debugGroundCheck.SetActive(false);
+        if (debugCrouchCheck) debugCrouchCheck.SetActive(false);
+#endif
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
-        moveAction.action.Enable();
-        jumpAction.action.Enable();
-        crouchAction.action.Enable();
-        sprintAction.action.Enable();
+        moveAction?.action.Enable();
+        jumpAction?.action.Enable();
+        crouchAction?.action.Enable();
+        sprintAction?.action.Enable();
+        attackAction?.action.Enable();
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
-        moveAction.action.Disable();
-        jumpAction.action.Disable();
-        crouchAction.action.Disable();
-        sprintAction.action.Disable();
+        moveAction?.action.Disable();
+        jumpAction?.action.Disable();
+        crouchAction?.action.Disable();
+        sprintAction?.action.Disable();
+        attackAction?.action.Disable();
     }
 
-    void Update()
+    private void Update()
     {
-        IsGrounded();
-        lefRightMovement();
-        crouchManager();
-        sprintManager();
-        jumpControl();
+        CheckGrounded();
+        HandleMovementInput();
+        HandleCrouch();
+        HandleSprint();
+        HandleJump();
+        HandleAttack();
     }
-    //To Do add more raycasts
-    void IsGrounded()
+
+    /// <summary>
+    /// Checks if the player is touching the ground using a raycast
+    /// </summary>
+    private void CheckGrounded()
     {
-        // Cast straight down from just inside the bottom of the collider
         Vector2 origin = (Vector2)transform.position +
-                         Vector2.down * (col.bounds.extents.y - 0.01f);
+                         Vector2.down * (playerCollider.bounds.extents.y - 0.01f);
 
-        // Visualize the ray in scene view
         Debug.DrawRay(origin, Vector2.down * groundCheckDistance, Color.red);
-
         isGrounded = Physics2D.Raycast(origin, Vector2.down, groundCheckDistance, groundMask);
+
+#if UNITY_EDITOR
+        if (debugGroundCheck) debugGroundCheck.SetActive(isGrounded);
+#endif
     }
 
-    void jumpControl()
+    /// <summary>
+    /// Handles horizontal movement based on player input
+    /// </summary>
+    private void HandleMovementInput()
     {
-        if (jumpAction.action.WasPressedThisFrame())
+        //flip the player sprite based on movement direction
+        if (movementInput.x > 0)
         {
-            lastJumpPressTime = Time.time;
+            transform.localScale = new Vector3(1, 1, 1); // Facing right
         }
-        //bool grounded = IsGrounded();
-        if (isGrounded)
+        else if (movementInput.x < 0)
         {
-            lastGroundedTime = Time.time;
-
+            transform.localScale = new Vector3(-1, 1, 1); // Facing left
+            
         }
+        movementInput = moveAction.action.ReadValue<Vector2>();
+        float horizontalVelocity = movementInput.x * moveSpeed * currentSpeedMultiplier;
+        playerRigidbody.linearVelocity = new Vector2(horizontalVelocity, playerRigidbody.linearVelocity.y);
+    }
 
-        bool canJump = (Time.time - lastGroundedTime < coyoteTime) &&
-                      (Time.time - lastJumpPressTime < jumpBufferTime);
+    /// <summary>
+    /// Handles crouch state and applies speed modifier
+    /// </summary>
+    private void HandleCrouch()
+    {
+        isCrouching = crouchAction.action.IsPressed();
+        currentSpeedMultiplier = isCrouching ? crouchSpeedMultiplier : 1f;
 
-        //Jump If CanJump is true
-        if (canJump)
+#if UNITY_EDITOR
+        if (debugCrouchCheck) debugCrouchCheck.SetActive(isCrouching);
+#endif
+    }
+
+    /// <summary>
+    /// Handles sprint state and applies speed modifier if not crouching
+    /// </summary>
+    private void HandleSprint()
+    {
+        isSprinting = sprintAction.action.IsPressed() && !isCrouching;
+
+        if (isSprinting && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            lastJumpPressTime = 0;
-            lastGroundedTime = 0;
-
+            currentSpeedMultiplier = sprintMultiplier;
         }
-        //Debug
-        debugGroundCheck.SetActive(isGrounded);
-    }
-
-
-    void lefRightMovement()
-    {
-        input = moveAction.action.ReadValue<Vector2>();
-        rb.linearVelocity = new Vector2(input.x * moveSpeed * speedManager(), rb.linearVelocity.y);
-    }
-
-    void crouchManager()
-    {
-        crouchHeld = crouchAction.action.IsPressed();
-
-        //debug
-        CrouchCheck.SetActive(crouchHeld);
-    }
-    void sprintManager()
-    {
-        sprintHeld = sprintAction.action.IsPressed();
-
-    }
-
-    float speedManager()
-    {
-        if (sprintHeld && isGrounded)
+        else if (!isCrouching)
         {
-            return sprintMultiplier;
+            currentSpeedMultiplier = 1f;
         }
-        //Normal Speed
-        return 1;
     }
 
+    /// <summary>
+    /// Handles jumping when the player presses the jump button and is grounded
+    /// </summary>
+    private void HandleJump()
+    {
+        if (jumpAction.action.WasPressedThisFrame() && isGrounded)
+        {
+            playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocity.x, jumpForce);
+        }
+    }
 
+    /// <summary>
+    /// Handles attack action when the player presses the attack button
+    /// </summary>
+    private void HandleAttack()
+    {
+        if (attackHandler == null)
+        {
+            Debug.LogError("WARNING: attackHandler is not assigned in the inspector.");
+            return;
+        }
+
+        if (attackAction.action.WasPressedThisFrame())
+        {
+            attackHandler.ActivateAttack(attackTime);
+        }
+    }
 }
