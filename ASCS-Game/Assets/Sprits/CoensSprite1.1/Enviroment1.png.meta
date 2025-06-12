@@ -1,43 +1,37 @@
 fileFormatVersion: 2
-guid: 2406c333b0f1b7d4d87d1f0bba299904
+guid: e8ae961d7ddcd4fadbf3cbeb6a8168b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3356837773014537050
-    second: Untitled_Artwork (1)_0
+      213: 5521214170104775472
+    second: Enviroment1_0
   - first:
-      213: -1313353148447141868
-    second: Untitled_Artwork (1)_1
+      213: 3889638191816793466
+    second: Enviroment1_1
   - first:
-      213: -6443216237094913530
-    second: Untitled_Artwork (1)_2
+      213: -5309222438389793864
+    second: Enviroment1_2
   - first:
-      213: 1945345745729503507
-    second: Untitled_Artwork (1)_3
+      213: 8950942476684237206
+    second: Enviroment1_3
   - first:
-      213: 3879095716626044692
-    second: Untitled_Artwork (1)_4
+      213: -7678066736490513567
+    second: Enviroment1_4
   - first:
-      213: -6349296538101697551
-    second: Untitled_Artwork (1)_5
+      213: 689700263600193341
+    second: Enviroment1_5
   - first:
-      213: -1935879956424701518
-    second: Untitled_Artwork (1)_6
+      213: 2774395969905089806
+    second: Enviroment1_6
   - first:
-      213: 1873255341244139497
-    second: Untitled_Artwork (1)_7
+      213: -4434531834667237132
+    second: Enviroment1_7
   - first:
-      213: -3722559698786490500
-    second: Untitled_Artwork (1)_8
+      213: 4337303216411004830
+    second: Enviroment1_8
   - first:
-      213: 1747862527023728869
-    second: Untitled_Artwork (1)_9
-  - first:
-      213: 918570629081043550
-    second: Untitled_Artwork (1)_10
-  - first:
-      213: 3466020760367402667
-    second: Untitled_Artwork (1)_11
+      213: -4408584771784501271
+    second: Enviroment1_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,10 +75,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,10 +99,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -133,51 +127,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5315255b22e59e20800000000000000
-      internalID: 3356837773014537050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled_Artwork (1)_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 410da2a154806cde0800000000000000
-      internalID: -1313353148447141868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled_Artwork (1)_2
+      name: Enviroment1_0
       rect:
         serializedVersion: 2
         x: 64
@@ -192,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60abde058f81596a0800000000000000
-      internalID: -6443216237094913530
+      spriteID: 033c2f9f80b4f9c40800000000000000
+      internalID: 5521214170104775472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_3
+      name: Enviroment1_1
       rect:
         serializedVersion: 2
         x: 96
@@ -214,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 311468b16a14ffa10800000000000000
-      internalID: 1945345745729503507
+      spriteID: a7d5808c355caf530800000000000000
+      internalID: 3889638191816793466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_4
+      name: Enviroment1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -236,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4171c3f700155d530800000000000000
-      internalID: 3879095716626044692
+      spriteID: 8bb3e3e525ad156b0800000000000000
+      internalID: -5309222438389793864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_5
+      name: Enviroment1_3
       rect:
         serializedVersion: 2
         x: 160
@@ -258,18 +208,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f3b4d84074c2e7a0800000000000000
-      internalID: -6349296538101697551
+      spriteID: 69918b722c2283c70800000000000000
+      internalID: 8950942476684237206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_6
+      name: Enviroment1_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 192
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -280,18 +230,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b9c185bf6f5225e0800000000000000
-      internalID: -1935879956424701518
+      spriteID: 16b7db9bbf6027590800000000000000
+      internalID: -7678066736490513567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_7
+      name: Enviroment1_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 224
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -302,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e7c574dec32ff910800000000000000
-      internalID: 1873255341244139497
+      spriteID: d3ff16d4cbe429900800000000000000
+      internalID: 689700263600193341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_8
+      name: Enviroment1_6
       rect:
         serializedVersion: 2
         x: 64
@@ -324,14 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7765aa4dafc65cc0800000000000000
-      internalID: -3722559698786490500
+      spriteID: e0dd77c6f62a08620800000000000000
+      internalID: 2774395969905089806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_9
+      name: Enviroment1_7
       rect:
         serializedVersion: 2
         x: 96
@@ -346,14 +296,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e8477f25b7a14810800000000000000
-      internalID: 1747862527023728869
+      spriteID: 4f08f71aac06572c0800000000000000
+      internalID: -4434531834667237132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_10
+      name: Enviroment1_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f46599b42313c30800000000000000
+      internalID: 4337303216411004830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviroment1_9
       rect:
         serializedVersion: 2
         x: 160
@@ -368,40 +340,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e529b7fce1b6fbc00800000000000000
-      internalID: 918570629081043550
+      spriteID: 9e7969bf18f81d2c0800000000000000
+      internalID: -4408584771784501271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_11
+      name: Enviroment1_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bae04dd8487c91030800000000000000
-      internalID: 3466020760367402667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled_Artwork (1)_12
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
+        x: 224
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -412,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: babe90e2a830ae148adeb112ff5a5b69
-      internalID: 1689816522
+      spriteID: 33711c1373fe64add8a5c89f1d3f5388
+      internalID: 471862808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_13
+      name: Enviroment1_11
       rect:
         serializedVersion: 2
         x: 64
@@ -434,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a62af5d8e543d54f9464c135f4ad164
-      internalID: -1873991
+      spriteID: 9653add447941491eab486e6235cc8ff
+      internalID: 1444037013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_14
+      name: Enviroment1_12
       rect:
         serializedVersion: 2
         x: 96
@@ -456,14 +406,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0ab980689c77ac45bffac89c9776420
-      internalID: 773243572
+      spriteID: 56555097f41d6408f9388eff0ca01cad
+      internalID: -288739147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_15
+      name: Enviroment1_13
       rect:
         serializedVersion: 2
         x: 128
@@ -478,14 +428,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac4fd39eb717ac943bd272d8024b68f6
-      internalID: 53822718
+      spriteID: 24e3fac1eea3a4cff9b2235f0c2a135e
+      internalID: -1714477761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_16
+      name: Enviroment1_14
       rect:
         serializedVersion: 2
         x: 160
@@ -500,14 +450,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4e6c19c6fefd5a4a94aa90cbf4b96bd
-      internalID: 1559000797
+      spriteID: a7d5a5550a248436bb0cd2d235f84030
+      internalID: 891018574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_17
+      name: Enviroment1_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c074bfc08604344e694c592e40092ebb
+      internalID: -274595250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviroment1_16
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea389542ca2e493fb5b0aa427f1eb60
+      internalID: 382509845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviroment1_17
       rect:
         serializedVersion: 2
         x: 0
@@ -522,14 +516,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba6deb6a8d92f94ab834fe6144262a3
-      internalID: -771948122
+      spriteID: b807ba780b4474cc082e7fef7fbc8238
+      internalID: -832259360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_18
+      name: Enviroment1_18
       rect:
         serializedVersion: 2
         x: 32
@@ -544,14 +538,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61e64e9671f38c6429d4361e59822dfc
-      internalID: 430188590
+      spriteID: f5f6246c899c34d33bf2115a72c22ac4
+      internalID: -985401749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_19
+      name: Enviroment1_19
       rect:
         serializedVersion: 2
         x: 64
@@ -566,14 +560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54bf4c913d57c934fbdee263610f07d5
-      internalID: -1697193593
+      spriteID: 2e2f683a5bd1145b1a5eab34df7735f3
+      internalID: -1689660985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_20
+      name: Enviroment1_20
       rect:
         serializedVersion: 2
         x: 96
@@ -588,17 +582,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e850ae1e1fbf32b48b9ab0b8307cc811
-      internalID: 1711456836
+      spriteID: 6799b6230a58b45feade8692401e5440
+      internalID: 766710348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_21
+      name: Enviroment1_21
       rect:
         serializedVersion: 2
-        x: 128
+        x: 192
         y: 64
         width: 32
         height: 32
@@ -610,17 +604,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10f7df5c1b5a86647a939cc1651e8f28
-      internalID: 1683132793
+      spriteID: d82e3eae70b084f63a968ad6839a1cfb
+      internalID: -1012333751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_22
+      name: Enviroment1_22
       rect:
         serializedVersion: 2
-        x: 160
+        x: 224
         y: 64
         width: 32
         height: 32
@@ -632,17 +626,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d8f91164f76dbf4695925e740cd405e
-      internalID: -241104726
+      spriteID: 6fc8b7bab56bb4f30abb1a560ccd29eb
+      internalID: -440599923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_23
+      name: Enviroment1_23
       rect:
         serializedVersion: 2
-        x: 32
+        x: 96
         y: 32
         width: 32
         height: 32
@@ -654,17 +648,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b251faa054a01d4a90afef787229cc2
-      internalID: -110715953
+      spriteID: 5a517dbb7ec3a4ff1bf2bc142029bfdb
+      internalID: -145162383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_24
+      name: Enviroment1_24
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 32
         width: 32
         height: 32
@@ -676,17 +670,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdeaca3ef5b9b9c41ac64047593363d0
-      internalID: 1945557752
+      spriteID: 148465b13d81c4f40ade2c9a5867bbfb
+      internalID: 1654815595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_25
+      name: Enviroment1_25
       rect:
         serializedVersion: 2
-        x: 160
+        x: 224
         y: 32
         width: 32
         height: 32
@@ -698,17 +692,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3acc249bc90cd649ae3b223de0ba06f
-      internalID: 529981773
+      spriteID: 8c13404ea5a1c4a69a7127c1ddf45292
+      internalID: 2126220378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_26
+      name: Enviroment1_26
       rect:
         serializedVersion: 2
-        x: 32
+        x: 96
         y: 0
         width: 32
         height: 32
@@ -720,36 +714,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93d7ee88e1d7f2b42822164cf0b60fb0
-      internalID: -1366434410
+      spriteID: 5d209d5c7cbb048919ac92c6f170c140
+      internalID: 1367429980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_27
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 208c76768466f3f4fb413270bf86af30
-      internalID: -1224221718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled_Artwork (1)_28
+      name: Enviroment1_27
       rect:
         serializedVersion: 2
         x: 128
@@ -764,17 +736,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e653ac740b676044c8b90fa3ea7fb247
-      internalID: 819476564
+      spriteID: 1b9358ef4e59b43d89e1b6cada13372a
+      internalID: 1108658708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork (1)_29
+      name: Enviroment1_28
       rect:
         serializedVersion: 2
-        x: 160
+        x: 192
         y: 0
         width: 32
         height: 32
@@ -786,8 +758,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8146aa6e63a160941b805d14281d1680
-      internalID: 1342414681
+      spriteID: d19194d301f2045ccbd92a0f7593609e
+      internalID: -601437694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviroment1_29
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415620116e8bd45c4b1b1e6514fdb430
+      internalID: -1738603209
       vertices: []
       indices: 
       edges: []
@@ -796,7 +790,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 69c3675223d3f4f6a8ce5df2762eb72e
     internalID: 0
     vertices: []
     indices: 
@@ -806,40 +800,38 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
-      - key: SpriteEditor.SliceOnImport
-        value: True
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Untitled_Artwork (1)_0: 3356837773014537050
-      Untitled_Artwork (1)_1: -1313353148447141868
-      Untitled_Artwork (1)_10: 918570629081043550
-      Untitled_Artwork (1)_11: 3466020760367402667
-      Untitled_Artwork (1)_12: 1689816522
-      Untitled_Artwork (1)_13: -1873991
-      Untitled_Artwork (1)_14: 773243572
-      Untitled_Artwork (1)_15: 53822718
-      Untitled_Artwork (1)_16: 1559000797
-      Untitled_Artwork (1)_17: -771948122
-      Untitled_Artwork (1)_18: 430188590
-      Untitled_Artwork (1)_19: -1697193593
-      Untitled_Artwork (1)_2: -6443216237094913530
-      Untitled_Artwork (1)_20: 1711456836
-      Untitled_Artwork (1)_21: 1683132793
-      Untitled_Artwork (1)_22: -241104726
-      Untitled_Artwork (1)_23: -110715953
-      Untitled_Artwork (1)_24: 1945557752
-      Untitled_Artwork (1)_25: 529981773
-      Untitled_Artwork (1)_26: -1366434410
-      Untitled_Artwork (1)_27: -1224221718
-      Untitled_Artwork (1)_28: 819476564
-      Untitled_Artwork (1)_29: 1342414681
-      Untitled_Artwork (1)_3: 1945345745729503507
-      Untitled_Artwork (1)_4: 3879095716626044692
-      Untitled_Artwork (1)_5: -6349296538101697551
-      Untitled_Artwork (1)_6: -1935879956424701518
-      Untitled_Artwork (1)_7: 1873255341244139497
-      Untitled_Artwork (1)_8: -3722559698786490500
-      Untitled_Artwork (1)_9: 1747862527023728869
+      Enviroment1_0: 5521214170104775472
+      Enviroment1_1: 3889638191816793466
+      Enviroment1_10: 471862808
+      Enviroment1_11: 1444037013
+      Enviroment1_12: -288739147
+      Enviroment1_13: -1714477761
+      Enviroment1_14: 891018574
+      Enviroment1_15: -274595250
+      Enviroment1_16: 382509845
+      Enviroment1_17: -832259360
+      Enviroment1_18: -985401749
+      Enviroment1_19: -1689660985
+      Enviroment1_2: -5309222438389793864
+      Enviroment1_20: 766710348
+      Enviroment1_21: -1012333751
+      Enviroment1_22: -440599923
+      Enviroment1_23: -145162383
+      Enviroment1_24: 1654815595
+      Enviroment1_25: 2126220378
+      Enviroment1_26: 1367429980
+      Enviroment1_27: 1108658708
+      Enviroment1_28: -601437694
+      Enviroment1_29: -1738603209
+      Enviroment1_3: 8950942476684237206
+      Enviroment1_4: -7678066736490513567
+      Enviroment1_5: 689700263600193341
+      Enviroment1_6: 2774395969905089806
+      Enviroment1_7: -4434531834667237132
+      Enviroment1_8: 4337303216411004830
+      Enviroment1_9: -4408584771784501271
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
