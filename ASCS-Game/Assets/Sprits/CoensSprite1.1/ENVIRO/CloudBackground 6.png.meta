@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cfbd0816ce27447af88ebc1767c9bc48
+guid: cc868082e01124b129d985a37eecf7c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -120280157391349757
-    second: CloudBackground 4_0
+      213: -4198472083278794211
+    second: CloudBackground 6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CloudBackground 4_0
+      name: CloudBackground 6_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 1129
+        width: 1125
         height: 523
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 308192985dda45ef0800000000000000
-      internalID: -120280157391349757
+      spriteID: d12f5cc72e70cb5c0800000000000000
+      internalID: -4198472083278794211
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CloudBackground 4_0: -120280157391349757
+      CloudBackground 6_0: -4198472083278794211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
