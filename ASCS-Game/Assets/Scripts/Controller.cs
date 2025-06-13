@@ -114,11 +114,11 @@ public class PlayerMovement2D : MonoBehaviour
         //flip the player sprite based on movement direction
         if (movementInput.x > 0)
         {
-            transform.localScale = new Vector3(8, 8, 8); // Facing right
+            transform.localScale = new Vector3(3, 3, 3); // Facing right
         }
         else if (movementInput.x < 0)
         {
-            transform.localScale = new Vector3(-8, 8, 8); // Facing left
+            transform.localScale = new Vector3(-4, 4, 4); // Facing left
             
         }
         movementInput = moveAction.action.ReadValue<Vector2>();
