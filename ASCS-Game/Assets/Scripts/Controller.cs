@@ -24,7 +24,6 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField, Range(1f, 20f)] private float moveSpeed = 8f;
     [SerializeField, Range(1f, 3f)] private float sprintMultiplier = 1.5f;
     [SerializeField, Range(0.1f, 1f)] private float crouchSpeedMultiplier = 0.5f;
-    [SerializeField, Range(0.1f, 2f)] private float attackTime = 0.5f;
     #endregion
 
     #region Jump Settings
@@ -38,19 +37,29 @@ public class PlayerMovement2D : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     private Collider2D playerCollider;
     private Vector2 movementInput;
+
+    //Boolean flags for player states
     private bool isCrouching;
     private bool isSprinting;
     private bool isGrounded;
+    private bool isJumping => jumpAction.action.WasPressedThisFrame() && isGrounded;
+    private bool isAttacking;
+    private bool isIdle => !isCrouching && !isSprinting && !isAttacking && !isJumping;
+
+    private Animator myAnimator;
+
+
     private float currentSpeedMultiplier = 1f;
-    private Attacks attackHandler;
+    private Component attackHandler;
 
     private void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+        myAnimator = GetComponent<Animator>();
 
         // Automatically find the Attacks component in children
-        attackHandler = GetComponentInChildren<Attacks>();
+        attackHandler = gameObject.GetComponentInChildren<AttackSystem>();
         if (attackHandler == null)
         {
             Debug.LogError("No Attacks component found in children!");
@@ -88,6 +97,10 @@ public class PlayerMovement2D : MonoBehaviour
         HandleSprint();
         HandleJump();
         HandleAttack();
+        animationHandler();
+
+          HandleMovementInput();
+        Debug.Log($"moveX = {movementInput.x:F4}");
     }
 
     /// <summary>
@@ -111,19 +124,22 @@ public class PlayerMovement2D : MonoBehaviour
     /// </summary>
     private void HandleMovementInput()
     {
+        movementInput = moveAction.action.ReadValue<Vector2>();
+         float horizontalVelocity = movementInput.x * moveSpeed * currentSpeedMultiplier;
+         playerRigidbody.linearVelocity  = new Vector2(horizontalVelocity, playerRigidbody.linearVelocity .y);
         //flip the player sprite based on movement direction
         if (movementInput.x > 0)
         {
+            print("Moving right");
             transform.localScale = new Vector3(4, 4, 4); // Facing right
         }
         else if (movementInput.x < 0)
         {
+            print("Moving left");
             transform.localScale = new Vector3(-4, 4, 4); // Facing left
-            
+
         }
-        movementInput = moveAction.action.ReadValue<Vector2>();
-        float horizontalVelocity = movementInput.x * moveSpeed * currentSpeedMultiplier;
-        playerRigidbody.linearVelocity = new Vector2(horizontalVelocity, playerRigidbody.linearVelocity.y);
+        
     }
 
     /// <summary>
@@ -164,6 +180,8 @@ public class PlayerMovement2D : MonoBehaviour
         if (jumpAction.action.WasPressedThisFrame() && isGrounded)
         {
             playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocity.x, jumpForce);
+            
+            //Run jump anaimation if available
         }
     }
 
@@ -180,7 +198,22 @@ public class PlayerMovement2D : MonoBehaviour
 
         if (attackAction.action.WasPressedThisFrame())
         {
-            attackHandler.ActivateAttack(attackTime);
+            attackHandler.SendMessage("ActivateAttack", 0.5f, SendMessageOptions.DontRequireReceiver);
         }
+    }
+
+    private void animationHandler()
+    {
+        if (myAnimator == null)
+        {
+            Debug.LogError("Animator not found and or assigned");
+            return;
+        }
+
+        myAnimator.SetBool("isCrouching", isCrouching);
+        myAnimator.SetBool("isSprinting", isSprinting);
+        myAnimator.SetBool("isJumping", isJumping);
+        myAnimator.SetBool("isAttacking", isAttacking);
+        myAnimator.SetBool("isIdle", isIdle);
     }
 }
