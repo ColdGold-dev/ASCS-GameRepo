@@ -26,6 +26,7 @@ public class GameMasterScript : MonoBehaviour
             {
                 //PlayerMasterScript = script.GetComponent<PlayerMasterScript>();
             }
+            PlayerMasterScript = script.GetComponent<PlayerMasterScript>();
         }
 
     }

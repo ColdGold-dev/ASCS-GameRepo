@@ -6,12 +6,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject healthBar;
     [SerializeField] private float health = 1000f;
 
-    //private GameMasterScript myGameMaster; // Reference to the GameMasterScript
+    private GameMasterScript myGameMaster; // Reference to the GameMasterScript
+
     private float maxHealth;
 
     Transform healthBarTransform;
+    
     private void Awake()
     {
+
         maxHealth = health; // Store the initial health as max health
         if (healthBar != null)
         {
@@ -22,14 +25,10 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogError("Health bar is not assigned in the inspector.");
         }
-        //myGameMaster = GameMasterScript.Instance; // Get the GameMasterScript instance
+        
     }
     // Update is called once per frame
 
-    void Start()
-    {
-        TakeDamage(100f);
-    }
     public void TakeDamage(float damage)
     {
         health -= damage;
@@ -39,9 +38,15 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            healthBar.SetActive(true); // Show health bar when taking damage
+            healthBar.SetActive(true);
             ShowHealthBar();
             print("Enemy took damage: " + damage + ", remaining health: " + health);
+            // Vector3 playerPosition = myGameMaster.PlayerMasterScript.GetPlayerPosition();
+            // // Vector2 knockbackDirection = (transform.position - playerPosition).normalized;
+            // // float knockbackForce = 5f; // Adjust the force as needed
+            // // GetComponent<Rigidbody2D>().AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+
+
         }
 
     }
