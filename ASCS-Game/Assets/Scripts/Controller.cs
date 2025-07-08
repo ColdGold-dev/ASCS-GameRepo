@@ -38,9 +38,14 @@ public class PlayerMovement2D : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     private Collider2D playerCollider;
     private Vector2 movementInput;
+    private Animator myAnimator;
+    // State variables
     private bool isCrouching;
     private bool isSprinting;
     private bool isGrounded;
+    private bool isJumping;
+    private bool isAttacking;
+    private bool isIdle => !isCrouching && !isSprinting && !isAttacking && isGrounded && movementInput == Vector2.zero;
     private float currentSpeedMultiplier = 1f;
     private Attacks attackHandler;
 
@@ -48,6 +53,7 @@ public class PlayerMovement2D : MonoBehaviour
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+        myAnimator = GetComponent<Animator>();
 
         // Automatically find the Attacks component in children
         attackHandler = GetComponentInChildren<Attacks>();
@@ -88,6 +94,7 @@ public class PlayerMovement2D : MonoBehaviour
         HandleSprint();
         HandleJump();
         HandleAttack();
+        HandleAnimator();
     }
 
     /// <summary>
@@ -96,7 +103,7 @@ public class PlayerMovement2D : MonoBehaviour
     private void CheckGrounded()
     {
         Vector2 origin = (Vector2)transform.position +
-                         Vector2.down * (playerCollider.bounds.extents.y - 0.01f);
+                         Vector2.down * (playerCollider.bounds.extents.y + 0.5f);
 
         Debug.DrawRay(origin, Vector2.down * groundCheckDistance, Color.red);
         isGrounded = Physics2D.Raycast(origin, Vector2.down, groundCheckDistance, groundMask);
@@ -119,11 +126,18 @@ public class PlayerMovement2D : MonoBehaviour
         else if (movementInput.x < 0)
         {
             transform.localScale = new Vector3(-4, 4, 4); // Facing left
-            
+
         }
         movementInput = moveAction.action.ReadValue<Vector2>();
         float horizontalVelocity = movementInput.x * moveSpeed * currentSpeedMultiplier;
         playerRigidbody.linearVelocity = new Vector2(horizontalVelocity, playerRigidbody.linearVelocity.y);
+
+        //if falling
+        if (playerRigidbody.linearVelocity.y < 0)
+        {
+            isJumping = false; // Reset jumping state when falling
+        }
+       
     }
 
     /// <summary>
@@ -149,10 +163,12 @@ public class PlayerMovement2D : MonoBehaviour
         if (isSprinting && isGrounded)
         {
             currentSpeedMultiplier = sprintMultiplier;
+            isSprinting = true;
         }
         else if (!isCrouching)
         {
             currentSpeedMultiplier = 1f;
+            isSprinting = false;
         }
     }
 
@@ -161,8 +177,10 @@ public class PlayerMovement2D : MonoBehaviour
     /// </summary>
     private void HandleJump()
     {
+        //isJumping = false;
         if (jumpAction.action.WasPressedThisFrame() && isGrounded)
         {
+            isJumping = true;
             playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocity.x, jumpForce);
         }
     }
@@ -181,6 +199,21 @@ public class PlayerMovement2D : MonoBehaviour
         if (attackAction.action.WasPressedThisFrame())
         {
             attackHandler.ActivateAttack(attackTime);
+            isAttacking = true;
         }
+        
+    }
+
+    public void HandleAnimator()
+    {
+        myAnimator.SetBool("isCrouching", isCrouching);
+        myAnimator.SetBool("isSprinting", isSprinting);
+        myAnimator.SetBool("isGrounded", isGrounded);
+        myAnimator.SetBool("isJumping", isJumping);
+        myAnimator.SetBool("isAttacking", isAttacking);
+        myAnimator.SetBool("isIdle", isIdle);
+
+        isAttacking = false; // Reset attacking state after handling animation
+        
     }
 }
