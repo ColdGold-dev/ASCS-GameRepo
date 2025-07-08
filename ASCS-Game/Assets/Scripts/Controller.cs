@@ -37,7 +37,6 @@ public class PlayerMovement2D : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     private Collider2D playerCollider;
     private Vector2 movementInput;
-<<<<<<< HEAD
     private Animator myAnimator;
     // State variables
     private bool isCrouching;
@@ -46,20 +45,7 @@ public class PlayerMovement2D : MonoBehaviour
     private bool isJumping;
     private bool isAttacking;
     private bool isIdle => !isCrouching && !isSprinting && !isAttacking && isGrounded && movementInput == Vector2.zero;
-=======
 
-    //Boolean flags for player states
-    private bool isCrouching;
-    private bool isSprinting;
-    private bool isGrounded;
-    private bool isJumping => jumpAction.action.WasPressedThisFrame() && isGrounded;
-    private bool isAttacking;
-    private bool isIdle => !isCrouching && !isSprinting && !isAttacking && !isJumping;
-
-    private Animator myAnimator;
-
-
->>>>>>> fec086ab5266cd5d0ca59afb8bcd3afb3761b588
     private float currentSpeedMultiplier = 1f;
     private Component attackHandler;
 
@@ -108,14 +94,8 @@ public class PlayerMovement2D : MonoBehaviour
         HandleSprint();
         HandleJump();
         HandleAttack();
-<<<<<<< HEAD
         HandleAnimator();
-=======
-        animationHandler();
 
-          HandleMovementInput();
-        Debug.Log($"moveX = {movementInput.x:F4}");
->>>>>>> fec086ab5266cd5d0ca59afb8bcd3afb3761b588
     }
 
     /// <summary>
@@ -154,9 +134,8 @@ public class PlayerMovement2D : MonoBehaviour
             transform.localScale = new Vector3(-4, 4, 4); // Facing left
 
         }
-<<<<<<< HEAD
         movementInput = moveAction.action.ReadValue<Vector2>();
-        float horizontalVelocity = movementInput.x * moveSpeed * currentSpeedMultiplier;
+         horizontalVelocity = movementInput.x * moveSpeed * currentSpeedMultiplier;
         playerRigidbody.linearVelocity = new Vector2(horizontalVelocity, playerRigidbody.linearVelocity.y);
 
         //if falling
@@ -164,10 +143,7 @@ public class PlayerMovement2D : MonoBehaviour
         {
             isJumping = false; // Reset jumping state when falling
         }
-       
-=======
-        
->>>>>>> fec086ab5266cd5d0ca59afb8bcd3afb3761b588
+
     }
 
     /// <summary>
@@ -230,12 +206,9 @@ public class PlayerMovement2D : MonoBehaviour
 
         if (attackAction.action.WasPressedThisFrame())
         {
-<<<<<<< HEAD
-            attackHandler.ActivateAttack(attackTime);
+           // attackHandler.ActivateAttack(attackTime);
             isAttacking = true;
-=======
-            attackHandler.SendMessage("ActivateAttack", 0.5f, SendMessageOptions.DontRequireReceiver);
->>>>>>> fec086ab5266cd5d0ca59afb8bcd3afb3761b588
+
         }
         
     }
