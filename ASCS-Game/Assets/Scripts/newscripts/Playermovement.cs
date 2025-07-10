@@ -22,20 +22,20 @@ public class Playermovement : MonoBehaviour
     {
         get
         {
-            if (IsMoving && !touchingDirections.IsOnWall)
+            if (canMove)
             {
-                if (IsRunning)
+                if (IsMoving && !touchingDirections.IsOnWall)
                 {
-                    return runSpeed;
+                    return IsRunning ? runSpeed : walkSpeed;
                 }
-                else
-                {
-                    return walkSpeed;
-                }
+                return 0;
             }
+
             return 0;
         }
     }
+
+
 
     public bool IsMoving
     {
@@ -74,6 +74,15 @@ public class Playermovement : MonoBehaviour
             _isFacingRight = value;
         }
     }
+
+    public bool canMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+        }
+    }
+
 
     private void Awake()
     {
@@ -127,6 +136,14 @@ public class Playermovement : MonoBehaviour
         {
             animator.SetTrigger(AnimationStrings.jump);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpulse);
+        }
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            animator.SetTrigger(AnimationStrings.Attack);
         }
     }
 
