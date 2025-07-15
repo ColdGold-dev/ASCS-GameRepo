@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ParallaxBackground : MonoBehaviour
 {
+    //terst
     [SerializeField] private Transform player;
     [SerializeField, Range(0f, 1f)] private float parallaxFactor = 0.5f;
     private Vector3 previousPlayerPosition;
@@ -13,7 +14,7 @@ public class ParallaxBackground : MonoBehaviour
             previousPlayerPosition = player.position;
         }
     }
-
+    // Update is called once per frame
     void LateUpdate()
     {
         if (player != null)

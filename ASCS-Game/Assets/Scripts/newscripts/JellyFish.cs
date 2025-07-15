@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class JellyFish : MonoBehaviour
 {
+    [SerializeField] private DetectionZone detectionZone;
 
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
@@ -22,6 +23,9 @@ public class JellyFish : MonoBehaviour
 
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
+
+    private Vector3 playerPos => GameMasterScript.Instance.Player.GetPlayerPosition();
+
 
     public WalkableDirection WalkDirection
     {
@@ -90,11 +94,28 @@ public class JellyFish : MonoBehaviour
         touchingDirections = GetComponent<TouchingDirections>();
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
+
+        detectionZone = GetComponentInChildren<DetectionZone>();
+    
+    }
+    private void OnEnable()
+    {
+        // Subscribe to events
+        detectionZone.playerDetected.AddListener(HandlePlayerDetected);
+        detectionZone.playerLost.AddListener(HandlePlayerLost);
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe to prevent memory leaks
+        detectionZone.playerDetected.RemoveListener(HandlePlayerDetected);
+        detectionZone.playerLost.RemoveListener(HandlePlayerLost);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //has detected target to attack
         HasTarget = attackZone.detectedColliders.Count > 0;
 
         if (AttackCooldown > 0)
@@ -139,6 +160,7 @@ public class JellyFish : MonoBehaviour
         }
     }
 
+    // called when hit by a attack
     public void OnHit(int damage, Vector2 knockback)
     {
         rb.linearVelocity = new Vector2(knockback.x, rb.linearVelocity.y + knockback.y);
@@ -151,4 +173,19 @@ public class JellyFish : MonoBehaviour
             FlipDirection();
         }
     }
+
+    private void HandlePlayerDetected()
+    {
+
+        walkDirectionVector = (playerPos.x > transform.position.x) ? Vector2.right : Vector2.left;
+        //flip direction based on player position
+        WalkDirection = (walkDirectionVector == Vector2.right) ? WalkableDirection.Right : WalkableDirection.Left;
+         
+    }
+
+    private void HandlePlayerLost()
+    {
+        //logic to handle when player is lost
+    }
+    
 }
