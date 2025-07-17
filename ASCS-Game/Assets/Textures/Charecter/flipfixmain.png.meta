@@ -1,0 +1,1133 @@
+fileFormatVersion: 2
+guid: 97a55067aff2c2845a26a98fdf5dbd4f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1148998400152486078
+    second: flipfixmain_0
+  - first:
+      213: -7841661871270407932
+    second: flipfixmain_1
+  - first:
+      213: -5125024389830358670
+    second: flipfixmain_2
+  - first:
+      213: 6351099496768086251
+    second: flipfixmain_3
+  - first:
+      213: 2594843848430735053
+    second: flipfixmain_4
+  - first:
+      213: 6201115111625388969
+    second: flipfixmain_5
+  - first:
+      213: -7494554899886557349
+    second: flipfixmain_6
+  - first:
+      213: -3990830140023260385
+    second: flipfixmain_7
+  - first:
+      213: 4474535682027236771
+    second: flipfixmain_8
+  - first:
+      213: 868114798789633973
+    second: flipfixmain_9
+  - first:
+      213: -1380085631634309449
+    second: flipfixmain_10
+  - first:
+      213: 5182026367692061885
+    second: flipfixmain_11
+  - first:
+      213: -5513617229223643438
+    second: flipfixmain_12
+  - first:
+      213: -7317318532073828092
+    second: flipfixmain_13
+  - first:
+      213: 6071615993496081665
+    second: flipfixmain_14
+  - first:
+      213: -5058779285144477527
+    second: flipfixmain_15
+  - first:
+      213: 7613074196950844330
+    second: flipfixmain_16
+  - first:
+      213: 7721312682692493142
+    second: flipfixmain_17
+  - first:
+      213: -1872610783699664850
+    second: flipfixmain_18
+  - first:
+      213: 8497302907948844612
+    second: flipfixmain_19
+  - first:
+      213: -8717750625423637272
+    second: flipfixmain_20
+  - first:
+      213: -2518685772609533416
+    second: flipfixmain_21
+  - first:
+      213: -593650838860001679
+    second: flipfixmain_22
+  - first:
+      213: 7967605506192796767
+    second: flipfixmain_23
+  - first:
+      213: -247357257564577863
+    second: flipfixmain_24
+  - first:
+      213: -6861767073641169691
+    second: flipfixmain_25
+  - first:
+      213: 876714424516342913
+    second: flipfixmain_26
+  - first:
+      213: -5983073458104900906
+    second: flipfixmain_27
+  - first:
+      213: -330993279071623853
+    second: flipfixmain_28
+  - first:
+      213: -8487282687459207125
+    second: flipfixmain_29
+  - first:
+      213: 7455706628723465669
+    second: flipfixmain_30
+  - first:
+      213: -6485852132308422708
+    second: flipfixmain_31
+  - first:
+      213: -2833865510492165770
+    second: flipfixmain_32
+  - first:
+      213: -8186475319770258504
+    second: flipfixmain_33
+  - first:
+      213: 241791843563789548
+    second: flipfixmain_34
+  - first:
+      213: -5185752522624967848
+    second: flipfixmain_35
+  - first:
+      213: 6782140374379953167
+    second: flipfixmain_36
+  - first:
+      213: -3866138995400327949
+    second: flipfixmain_37
+  - first:
+      213: 1968621669607210391
+    second: flipfixmain_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flipfixmain_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 388
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0c49015ff02ff00800000000000000
+      internalID: 1148998400152486078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 388
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401d3323312dc2390800000000000000
+      internalID: -7841661871270407932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 388
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279c2f2987140e8b0800000000000000
+      internalID: -5125024389830358670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 388
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0260eb753a32850800000000000000
+      internalID: 6351099496768086251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 388
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce42596bbcb20420800000000000000
+      internalID: 2594843848430735053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_5
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 388
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3fcbfc659ce0650800000000000000
+      internalID: 6201115111625388969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b573992c60efdf790800000000000000
+      internalID: -7494554899886557349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 308
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1bbdf8c129bd98c0800000000000000
+      internalID: -3990830140023260385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 308
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad2b06ee7eb81e30800000000000000
+      internalID: 4474535682027236771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 308
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7ad1e5fc92c0c00800000000000000
+      internalID: 868114798789633973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 308
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bef0d61e63f8dce0800000000000000
+      internalID: -1380085631634309449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 308
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc3efe96814ae740800000000000000
+      internalID: 5182026367692061885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6b6a8a752bb73b0800000000000000
+      internalID: -5513617229223643438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 228
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4015b5b5099a37a90800000000000000
+      internalID: -7317318532073828092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 228
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1051ae8c396b24450800000000000000
+      internalID: 6071615993496081665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 228
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a0ebdfea0b9bc9b0800000000000000
+      internalID: -5058779285144477527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 228
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa382f575a217a960800000000000000
+      internalID: 7613074196950844330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 228
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65fba93c9fc972b60800000000000000
+      internalID: 7721312682692493142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_18
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 228
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20040be9662306e0800000000000000
+      internalID: -1872610783699664850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_19
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 228
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4464f2169fb7ce570800000000000000
+      internalID: 8497302907948844612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e44f2baef3540780800000000000000
+      internalID: -8717750625423637272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_21
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 148
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a47c662a4db0dd0800000000000000
+      internalID: -2518685772609533416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 148
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e032515bde2c7f0800000000000000
+      internalID: -593650838860001679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 148
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c61136efe929e60800000000000000
+      internalID: 7967605506192796767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_24
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 148
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf9f3282e5319cf0800000000000000
+      internalID: -247357257564577863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec7524a33b16c0a0800000000000000
+      internalID: -6861767073641169691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_26
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184f1c2cf17ba2c00800000000000000
+      internalID: 876714424516342913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2e698b36ad7fca0800000000000000
+      internalID: -5983073458104900906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355e4e9cd53186bf0800000000000000
+      internalID: -330993279071623853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_29
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b28dba10d5d173a80800000000000000
+      internalID: -8487282687459207125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_30
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd56924dadf77760800000000000000
+      internalID: 7455706628723465669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_31
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfeb0469df9df5a0800000000000000
+      internalID: -6485852132308422708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_32
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67922e925561ca8d0800000000000000
+      internalID: -2833865510492165770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_33
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3679a021cc36e80800000000000000
+      internalID: -8186475319770258504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_34
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 68
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecd43196640b5300800000000000000
+      internalID: 241791843563789548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_35
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77178fe651740e049b83b1431ac5cf0f
+      internalID: -5185752522624967848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_36
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 80
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297a0e1e5976f9e4db579c1c10eaa128
+      internalID: 6782140374379953167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_37
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d03dce3c131b9478e95751da1a3f54
+      internalID: -3866138995400327949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flipfixmain_38
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee37ecfbd0795204685548f8503e98c7
+      internalID: 1968621669607210391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 077f8e341bbd2ad47af85682bb8c5905
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":80.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":1.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      flipfixmain_0: 1148998400152486078
+      flipfixmain_1: -7841661871270407932
+      flipfixmain_10: -1380085631634309449
+      flipfixmain_11: 5182026367692061885
+      flipfixmain_12: -5513617229223643438
+      flipfixmain_13: -7317318532073828092
+      flipfixmain_14: 6071615993496081665
+      flipfixmain_15: -5058779285144477527
+      flipfixmain_16: 7613074196950844330
+      flipfixmain_17: 7721312682692493142
+      flipfixmain_18: -1872610783699664850
+      flipfixmain_19: 8497302907948844612
+      flipfixmain_2: -5125024389830358670
+      flipfixmain_20: -8717750625423637272
+      flipfixmain_21: -2518685772609533416
+      flipfixmain_22: -593650838860001679
+      flipfixmain_23: 7967605506192796767
+      flipfixmain_24: -247357257564577863
+      flipfixmain_25: -6861767073641169691
+      flipfixmain_26: 876714424516342913
+      flipfixmain_27: -5983073458104900906
+      flipfixmain_28: -330993279071623853
+      flipfixmain_29: -8487282687459207125
+      flipfixmain_3: 6351099496768086251
+      flipfixmain_30: 7455706628723465669
+      flipfixmain_31: -6485852132308422708
+      flipfixmain_32: -2833865510492165770
+      flipfixmain_33: -8186475319770258504
+      flipfixmain_34: 241791843563789548
+      flipfixmain_35: -5185752522624967848
+      flipfixmain_36: 6782140374379953167
+      flipfixmain_37: -3866138995400327949
+      flipfixmain_38: 1968621669607210391
+      flipfixmain_4: 2594843848430735053
+      flipfixmain_5: 6201115111625388969
+      flipfixmain_6: -7494554899886557349
+      flipfixmain_7: -3990830140023260385
+      flipfixmain_8: 4474535682027236771
+      flipfixmain_9: 868114798789633973
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

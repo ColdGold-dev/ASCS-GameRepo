@@ -1,0 +1,642 @@
+fileFormatVersion: 2
+guid: 84a0d064d9f11f4438acbc4bf6ad7778
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5228230076110195048
+    second: flippedaginjellyfish_0
+  - first:
+      213: 1663326501774401283
+    second: flippedaginjellyfish_1
+  - first:
+      213: 5692196127246962765
+    second: flippedaginjellyfish_2
+  - first:
+      213: 2964054062714329735
+    second: flippedaginjellyfish_3
+  - first:
+      213: -6636627429815659749
+    second: flippedaginjellyfish_4
+  - first:
+      213: -2374584641843540700
+    second: flippedaginjellyfish_5
+  - first:
+      213: 8191503859763244292
+    second: flippedaginjellyfish_6
+  - first:
+      213: -1789863066963094965
+    second: flippedaginjellyfish_7
+  - first:
+      213: -4938023915123147651
+    second: flippedaginjellyfish_8
+  - first:
+      213: 3671723410811555939
+    second: flippedaginjellyfish_9
+  - first:
+      213: 9075183048888926322
+    second: flippedaginjellyfish_10
+  - first:
+      213: -8473697450705894352
+    second: flippedaginjellyfish_11
+  - first:
+      213: -6187737304940474762
+    second: flippedaginjellyfish_12
+  - first:
+      213: 2779561654578537016
+    second: flippedaginjellyfish_13
+  - first:
+      213: -2103058057703019618
+    second: flippedaginjellyfish_14
+  - first:
+      213: -6994228635838926890
+    second: flippedaginjellyfish_15
+  - first:
+      213: -7665860935340564849
+    second: flippedaginjellyfish_16
+  - first:
+      213: 6099946816416999512
+    second: flippedaginjellyfish_17
+  - first:
+      213: -4670700347895759925
+    second: flippedaginjellyfish_18
+  - first:
+      213: -1109011365163664221
+    second: flippedaginjellyfish_19
+  - first:
+      213: -1682124391205478624
+    second: flippedaginjellyfish_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flippedaginjellyfish_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 332
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896307532789177b0800000000000000
+      internalID: -5228230076110195048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 332
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f91c304a2551710800000000000000
+      internalID: 1663326501774401283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 332
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40d86c183ebefe40800000000000000
+      internalID: 5692196127246962765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 332
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a142f377f622920800000000000000
+      internalID: 2964054062714329735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 264
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b135933d386f5e3a0800000000000000
+      internalID: -6636627429815659749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 264
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d41dd69d7cb0fd0800000000000000
+      internalID: -2374584641843540700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_6
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 264
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ded692c511ea170800000000000000
+      internalID: 8191503859763244292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_7
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 264
+        width: 96
+        height: 68
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b42d21116012927e0800000000000000
+      internalID: -1789863066963094965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_8
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 264
+        width: 96
+        height: 68
+      alignment: 9
+      pivot: {x: 0.7, y: 0.4830717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c73b6796d987bb0800000000000000
+      internalID: -4938023915123147651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_9
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 196
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36098ee0df494f230800000000000000
+      internalID: 3671723410811555939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_10
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 196
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270cbac86e681fd70800000000000000
+      internalID: 9075183048888926322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_11
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034ca8c6011676a80800000000000000
+      internalID: -8473697450705894352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_12
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e079784bdb02aa0800000000000000
+      internalID: -6187737304940474762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_13
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832637c199cf29620800000000000000
+      internalID: 2779561654578537016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_14
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ba698c6df60d2e0800000000000000
+      internalID: -2103058057703019618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_15
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 60
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfa4fadc128fee90800000000000000
+      internalID: -6994228635838926890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 60
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e5b7348146d9590800000000000000
+      internalID: -7665860935340564849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_17
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 60
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8586f458f4d57a450800000000000000
+      internalID: 6099946816416999512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_18
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 60
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb316fa7c65e2fb0800000000000000
+      internalID: -4670700347895759925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flippedaginjellyfish_19
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 264
+        width: 96
+        height: 68
+      alignment: 9
+      pivot: {x: 0.7, y: 0.49062303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0ed0b7d9f7d924cb8e61f5d9ff6bc0
+      internalID: -1109011365163664221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c4daeb35eb6916f4ca17afa39af3e819
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":68.0},"gridSpriteOffset":{"x":15.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      flippedaginjellyfish_0: -5228230076110195048
+      flippedaginjellyfish_1: 1663326501774401283
+      flippedaginjellyfish_10: 9075183048888926322
+      flippedaginjellyfish_11: -8473697450705894352
+      flippedaginjellyfish_12: -6187737304940474762
+      flippedaginjellyfish_13: 2779561654578537016
+      flippedaginjellyfish_14: -2103058057703019618
+      flippedaginjellyfish_15: -6994228635838926890
+      flippedaginjellyfish_16: -7665860935340564849
+      flippedaginjellyfish_17: 6099946816416999512
+      flippedaginjellyfish_18: -4670700347895759925
+      flippedaginjellyfish_19: -1109011365163664221
+      flippedaginjellyfish_2: 5692196127246962765
+      flippedaginjellyfish_3: 2964054062714329735
+      flippedaginjellyfish_4: -6636627429815659749
+      flippedaginjellyfish_5: -2374584641843540700
+      flippedaginjellyfish_6: 8191503859763244292
+      flippedaginjellyfish_7: -1789863066963094965
+      flippedaginjellyfish_8: -4938023915123147651
+      flippedaginjellyfish_9: 3671723410811555939
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

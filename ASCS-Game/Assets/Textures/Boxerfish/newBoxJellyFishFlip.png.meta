@@ -1,0 +1,668 @@
+fileFormatVersion: 2
+guid: 27b7ad2b33c41b74aa89c720d3a5a3f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -388060839082408072
+    second: newBoxJellyFishFlip_0
+  - first:
+      213: 7224048346887184471
+    second: newBoxJellyFishFlip_1
+  - first:
+      213: 3979820908794515755
+    second: newBoxJellyFishFlip_2
+  - first:
+      213: 5839094354630814856
+    second: newBoxJellyFishFlip_3
+  - first:
+      213: 5373850051445376736
+    second: newBoxJellyFishFlip_4
+  - first:
+      213: -2391417022034003466
+    second: newBoxJellyFishFlip_5
+  - first:
+      213: 287357013393387889
+    second: newBoxJellyFishFlip_6
+  - first:
+      213: -7429083242171798159
+    second: newBoxJellyFishFlip_7
+  - first:
+      213: -7885951083493907736
+    second: newBoxJellyFishFlip_8
+  - first:
+      213: -4820876847912644057
+    second: newBoxJellyFishFlip_9
+  - first:
+      213: -1554573529475412385
+    second: newBoxJellyFishFlip_10
+  - first:
+      213: -5880899997953275078
+    second: newBoxJellyFishFlip_11
+  - first:
+      213: -1624635176786203822
+    second: newBoxJellyFishFlip_12
+  - first:
+      213: -1948792163907486317
+    second: newBoxJellyFishFlip_13
+  - first:
+      213: -3545190256471732492
+    second: newBoxJellyFishFlip_14
+  - first:
+      213: 5846827411412118708
+    second: newBoxJellyFishFlip_15
+  - first:
+      213: -7043979995922470474
+    second: newBoxJellyFishFlip_16
+  - first:
+      213: 223885602316741965
+    second: newBoxJellyFishFlip_17
+  - first:
+      213: -1214672952640427587
+    second: newBoxJellyFishFlip_18
+  - first:
+      213: -4830580106939777190
+    second: newBoxJellyFishFlip_19
+  - first:
+      213: -6381770648115430602
+    second: newBoxJellyFishFlip_20
+  - first:
+      213: -3794485371742416446
+    second: newBoxJellyFishFlip_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 332
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877c04f09b45d9af0800000000000000
+      internalID: -388060839082408072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 332
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750657462b9f04460800000000000000
+      internalID: 7224048346887184471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 332
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b219e52d70a2b3730800000000000000
+      internalID: 3979820908794515755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 332
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c22c1f061a80150800000000000000
+      internalID: 5839094354630814856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 264
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6cd906620c39a40800000000000000
+      internalID: 5373850051445376736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 264
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f937d383eaffced0800000000000000
+      internalID: -2391417022034003466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_6
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 264
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 171b7036ea5ecf300800000000000000
+      internalID: 287357013393387889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_7
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 264
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17dea87f62896e890800000000000000
+      internalID: -7429083242171798159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_8
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 264
+        width: 96
+        height: 68
+      alignment: 9
+      pivot: {x: 0.6639001, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e22d3865497f8290800000000000000
+      internalID: -7885951083493907736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_9
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 196
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72213468c0ec81db0800000000000000
+      internalID: -4820876847912644057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_10
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 196
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e84668c9b0d6ae0800000000000000
+      internalID: -1554573529475412385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_11
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b46663c98d26ea0800000000000000
+      internalID: -5880899997953275078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bed061ae22479e0800000000000000
+      internalID: -1624635176786203822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_13
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39dba312adf74f4e0800000000000000
+      internalID: -1948792163907486317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_14
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe83d5be34fccec0800000000000000
+      internalID: -3545190256471732492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 128
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc6c388d8a142150800000000000000
+      internalID: 5846827411412118708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_16
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 60
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9651aa381ce3e90800000000000000
+      internalID: -7043979995922470474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_17
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 60
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4de964e4c66b1300800000000000000
+      internalID: 223885602316741965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_18
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 60
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9a79b926d942fe0800000000000000
+      internalID: -1214672952640427587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_19
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 60
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f39ca7cf456fcb0800000000000000
+      internalID: -4830580106939777190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newBoxJellyFishFlip_20
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 264
+        width: 100
+        height: 68
+      alignment: 9
+      pivot: {x: 0.64423156, y: 0.5064271}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5772c2bac777ea94d89825e0af9b67f8
+      internalID: -6381770648115430602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e4a5bb373c13de94080b878d1a0e652b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":68.0},"gridSpriteOffset":{"x":15.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      newBoxJellyFishFlip_0: -388060839082408072
+      newBoxJellyFishFlip_1: 7224048346887184471
+      newBoxJellyFishFlip_10: -1554573529475412385
+      newBoxJellyFishFlip_11: -5880899997953275078
+      newBoxJellyFishFlip_12: -1624635176786203822
+      newBoxJellyFishFlip_13: -1948792163907486317
+      newBoxJellyFishFlip_14: -3545190256471732492
+      newBoxJellyFishFlip_15: 5846827411412118708
+      newBoxJellyFishFlip_16: -7043979995922470474
+      newBoxJellyFishFlip_17: 223885602316741965
+      newBoxJellyFishFlip_18: -1214672952640427587
+      newBoxJellyFishFlip_19: -4830580106939777190
+      newBoxJellyFishFlip_2: 3979820908794515755
+      newBoxJellyFishFlip_20: -6381770648115430602
+      newBoxJellyFishFlip_3: 5839094354630814856
+      newBoxJellyFishFlip_4: 5373850051445376736
+      newBoxJellyFishFlip_5: -2391417022034003466
+      newBoxJellyFishFlip_6: 287357013393387889
+      newBoxJellyFishFlip_7: -7429083242171798159
+      newBoxJellyFishFlip_8: -7885951083493907736
+      newBoxJellyFishFlip_9: -4820876847912644057
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
