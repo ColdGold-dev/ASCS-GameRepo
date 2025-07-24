@@ -33,8 +33,8 @@ Transform:
   m_GameObject: {fileID: 189980988057241729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.08, y: 1.17, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7027892527347054540}
@@ -84,12 +84,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5388578836390071730, guid: f016995d9d48b449695ba8a09547aba0, type: 3}
+  m_Sprite: {fileID: 86012204032789389, guid: af956c9f8d42949f7929152f49e8f605, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -294,8 +294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322d3f3bcc9fec4488d491f159458b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 7
-  runSpeed: 12
+  walkSpeed: 6
+  runSpeed: 7
   airWalkSpeed: 5
   jumpImpulse: 7
   _isMoving: 0
@@ -367,8 +367,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.02902174, y: -0.17171144}
-  m_Size: {x: 0.1421752, y: 0.45657706}
+  m_Offset: {x: -0.070830874, y: -0.36283898}
+  m_Size: {x: 0.5005393, y: 1.5197237}
   m_Direction: 0
 --- !u!114 &3842831014481653044
 MonoBehaviour:
@@ -487,11 +487,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.293745, y: 0.13974547}
-      - {x: 0.13999826, y: -0.009906735}
-      - {x: 0.1675603, y: -0.3809879}
-      - {x: 0.4283234, y: -0.2760787}
-      - {x: 0.5146346, y: 0.04884255}
+    - - {x: 0.6200778, y: 0.7994546}
+      - {x: 0.15507281, y: 0.6259372}
+      - {x: 0.528226, y: -0.03379768}
+      - {x: 0.44827878, y: -0.86477935}
+      - {x: 1.1271334, y: -0.25816053}
+      - {x: 1.0103714, y: 0.44901568}
   m_UseDelaunayMesh: 0
 --- !u!114 &5150327772528965158
 MonoBehaviour:
