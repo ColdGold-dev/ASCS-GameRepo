@@ -156,7 +156,7 @@ public class JellyFish : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Current walkable direction is not set to legal values of right or left");
+          //  Debug.LogError("Current walkable direction is not set to legal values of right or left");
         }
     }
 
@@ -176,7 +176,7 @@ public class JellyFish : MonoBehaviour
 
     private void HandlePlayerDetected()
     {
-        print("X" + playerPos.x + "Y" + playerPos.y);
+    //    print("X" + playerPos.x + "Y" + playerPos.y);
         walkDirectionVector = (playerPos.x > transform.position.x) ? Vector2.right : Vector2.left;
         //flip direction based on player position
         WalkDirection = (walkDirectionVector == Vector2.right) ? WalkableDirection.Right : WalkableDirection.Left;

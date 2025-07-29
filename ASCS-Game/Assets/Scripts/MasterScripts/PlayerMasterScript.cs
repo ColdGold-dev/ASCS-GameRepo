@@ -41,7 +41,7 @@ public class PlayerMasterScript : MonoBehaviour
     {
         if (playerPrefab == null)
         {
-            Debug.LogError("Player prefab is not assigned in the inspector.");
+     //       Debug.LogError("Player prefab is not assigned in the inspector.");
             return null;
         }
         return playerPrefab;

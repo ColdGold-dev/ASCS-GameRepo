@@ -70,7 +70,7 @@ public class Damageable : MonoBehaviour
         {
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
-            Debug.Log("IsAlive set " + value);
+       //     Debug.Log("IsAlive set " + value);
 
             if (value == false)
             {
@@ -95,8 +95,21 @@ public class Damageable : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        //chatbtchange
+        animator = GetComponentInChildren<Animator>();
+
     }
+
+
+void Start()
+{
+    animator.SetTrigger("hit");
+}
+
+
+
+
+
 
     private void Update()
     {
@@ -122,6 +135,7 @@ public class Damageable : MonoBehaviour
     }
 
     // Returns whether the damageable took damage or not
+    // Chatgbtchange
     public bool Hit(int damage, Vector2 knockback)
     {
         if (IsAlive && !isInvincible)
@@ -133,7 +147,7 @@ public class Damageable : MonoBehaviour
             animator.SetTrigger(AnimationStrings.hitTrigger);
             LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
-           // CharacterEvents.characterDamaged.Invoke(gameObject, damage);
+            // CharacterEvents.characterDamaged.Invoke(gameObject, damage);
 
             return true;
         }

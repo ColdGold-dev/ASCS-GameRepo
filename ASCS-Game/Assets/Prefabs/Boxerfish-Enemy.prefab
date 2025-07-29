@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 1147643068158490057}
   - component: {fileID: 5880462460512783024}
   - component: {fileID: 5033874956345091399}
+  - component: {fileID: 3492570169927314062}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -542,7 +543,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.53, y: 0.076, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: -2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7769697527169262896}
@@ -557,7 +558,7 @@ Animator:
   m_GameObject: {fileID: 7563820555085985925}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0df00325ceda54f36834652e26d97f6f, type: 2}
+  m_Controller: {fileID: 9100000, guid: d0948c8110de4974ea32ea9f6a30b5f7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -624,3 +625,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3492570169927314062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563820555085985925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf28ec21c253962439f17ef08d8c18da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageableHit:
+    m_PersistentCalls:
+      m_Calls: []
+  damageableDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  _maxHealth: 100
+  _health: 100
+  _isAlive: 1
+  isInvincible: 0
+  invincibilityTime: 0.25

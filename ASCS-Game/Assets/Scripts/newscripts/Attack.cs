@@ -16,7 +16,9 @@ public class Attack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Aidans Debug Stuff :)
-        print(collision.name + " Is in range.");
+       // print(collision.name + " Is in range.");
+     //   Debug.Log($"Attack collided with {collision.name}");
+
 
         // See if it can be hit
         Damageable damageable = collision.GetComponent<Damageable>();
@@ -28,9 +30,11 @@ public class Attack : MonoBehaviour
 
             // Hit the target
             bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
+                Debug.Log("Calling Hit() on: " + damageable.gameObject.name);
 
-            if (gotHit)
-                Debug.Log(collision.name + " hit for " + attackDamage);
+
+           // if (gotHit)
+            //  Debug.Log(collision.name + " hit for " + attackDamage);
         }
     }
 }

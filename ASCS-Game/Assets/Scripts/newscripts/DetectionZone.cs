@@ -44,7 +44,7 @@ public class DetectionZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         detectedColliders.Add(collision);
-        Debug.Log("Entered: " + collision.name);
+  //      Debug.Log("Entered: " + collision.name);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -67,20 +67,20 @@ public class DetectionZone : MonoBehaviour
 
         if (angleToPlayer <= visionAngle * 0.5f && toPlayer.magnitude <= visionDistance)
         {
-            Debug.Log(this.name + "|| Player in cone!");
+       //     Debug.Log(this.name + "|| Player in cone!");
             playerDetected.Invoke();
             wasPlayerDetected = true;
         }
         // Check if a player is within a close range, uses distance check (simple circle check)
         else if (toPlayer.magnitude <= minimDetectionDistance)
         {
-            Debug.Log(this.name + "|| Player is within 1 unit radius of enemy!");
+       //     Debug.Log(this.name + "|| Player is within 1 unit radius of enemy!");
             playerDetected.Invoke();
             wasPlayerDetected = true;
         }
         else if (wasPlayerDetected)
         {
-            Debug.Log(this.name + "|| Player lost!");
+     //       Debug.Log(this.name + "|| Player lost!");
             playerLost.Invoke();
             wasPlayerDetected = false;
         }
