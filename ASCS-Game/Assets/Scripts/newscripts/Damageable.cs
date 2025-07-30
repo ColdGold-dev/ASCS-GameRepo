@@ -11,6 +11,10 @@ public class Damageable : MonoBehaviour
 
     Animator animator;
 
+[SerializeField] private Animator childAnimator;
+
+
+
     [SerializeField]
     private int _maxHealth = 100;
 
@@ -70,7 +74,7 @@ public class Damageable : MonoBehaviour
         {
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
-       //     Debug.Log("IsAlive set " + value);
+            Debug.Log("IsAlive set " + value);
 
             if (value == false)
             {
@@ -95,21 +99,8 @@ public class Damageable : MonoBehaviour
 
     private void Awake()
     {
-        //chatbtchange
-        animator = GetComponentInChildren<Animator>();
-
+        animator = GetComponent<Animator>();
     }
-
-
-void Start()
-{
-    animator.SetTrigger("hit");
-}
-
-
-
-
-
 
     private void Update()
     {
@@ -135,7 +126,6 @@ void Start()
     }
 
     // Returns whether the damageable took damage or not
-    // Chatgbtchange
     public bool Hit(int damage, Vector2 knockback)
     {
         if (IsAlive && !isInvincible)
@@ -144,10 +134,20 @@ void Start()
             isInvincible = true;
 
             // Notify other subscribed components that the damageable was hit to handle the knockback and such
+           
+
             animator.SetTrigger(AnimationStrings.hitTrigger);
+            if (childAnimator != null)
+            {
+            childAnimator.SetTrigger(AnimationStrings.hitTrigger);
+            }
+
+
+
+
             LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
-            // CharacterEvents.characterDamaged.Invoke(gameObject, damage);
+           // CharacterEvents.characterDamaged.Invoke(gameObject, damage);
 
             return true;
         }

@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 2098812494312617487}
   - component: {fileID: 3270696054749495155}
   - component: {fileID: 5068852266861076676}
+  - component: {fileID: 424060821918591213}
   m_Layer: 6
   m_Name: Boxerfish-Enemy
   m_TagString: Untagged
@@ -137,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 1154808427929173763}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.24, y: -0.42, z: 0}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 2.533128}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -169,7 +170,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -262,8 +263,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.13980588, y: -0.101866245}
-  m_Size: {x: 0.49176103, y: 1.8813162}
+  m_Offset: {x: 0.13475695, y: -0.07219297}
+  m_Size: {x: 0.4960938, y: 1.9080404}
   m_Direction: 0
 --- !u!114 &8257077383969722444
 MonoBehaviour:
@@ -371,6 +372,7 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
+  childAnimator: {fileID: 0}
   _maxHealth: 100
   _health: 100
   _isAlive: 1
@@ -414,6 +416,20 @@ CustomCollider2D:
   m_CustomShapes:
     m_Shapes: []
     m_Vertices: []
+--- !u!114 &424060821918591213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154808427929173763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead84bff83e99644c943c7b086408159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageableSource: {fileID: 3270696054749495155}
+  flashDuration: 1
 --- !u!1 &5089796523502986594
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,9 +541,9 @@ GameObject:
   - component: {fileID: 1147643068158490057}
   - component: {fileID: 5880462460512783024}
   - component: {fileID: 5033874956345091399}
-  - component: {fileID: 3492570169927314062}
+  - component: {fileID: 4920911236746324783}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,9 +558,9 @@ Transform:
   m_GameObject: {fileID: 7563820555085985925}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.53, y: 0.076, z: 0}
-  m_LocalScale: {x: -2, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -1, y: 0.146, z: 0}
+  m_LocalScale: {x: -2, y: 2, z: 5.066256}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7769697527169262896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -625,7 +641,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3492570169927314062
+--- !u!114 &4920911236746324783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -634,20 +650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7563820555085985925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf28ec21c253962439f17ef08d8c18da, type: 3}
+  m_Script: {fileID: 11500000, guid: ad32fe7655c1fe743894d9fecc31f8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageableHit:
-    m_PersistentCalls:
-      m_Calls: []
-  damageableDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  healthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  _maxHealth: 100
-  _health: 100
-  _isAlive: 1
-  isInvincible: 0
-  invincibilityTime: 0.25
+  parentDamageable: {fileID: 3270696054749495155}
