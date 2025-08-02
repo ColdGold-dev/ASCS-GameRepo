@@ -80,17 +80,17 @@ public float attackCooldownTime = 2f; // You can edit this in the Inspector
 
     //chatgbtaddedforattackcoodedown
 
-    public float AttackCooldown
-    {
-        get
-        {
-            return animator.GetFloat(AnimationStrings.attackCooldown);
-        }
-        private set
-        {
-            animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value, 0));
-        }
-    }
+    // public float AttackCooldown
+    // {
+    //     get
+    //     {
+    //         return animator.GetFloat(AnimationStrings.attackCooldown);
+    //     }
+    //     private set
+    //     {
+    //         animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value, 0));
+    //     }
+    // }
 
     private void Awake()
     {
@@ -119,24 +119,24 @@ public float attackCooldownTime = 2f; // You can edit this in the Inspector
     // Update is called once per frame
 
    
-void Update()
-{
-    HasTarget = attackZone.detectedColliders.Count > 0;
+// void Update()
+// {
+//     HasTarget = attackZone.detectedColliders.Count > 0;
 
-    if (HasTarget && AttackCooldown <= 0f)
-    {
-        animator.SetTrigger("Attack");
-        AttackCooldown = attackCooldownTime; // use the public cooldown time
-        animator.SetBool(AnimationStrings.canMove, false); // optional: freeze during attack
-    }
+//     if (HasTarget && AttackCooldown <= 0f)
+//     {
+//         animator.SetTrigger("Attack");
+//         AttackCooldown = attackCooldownTime; // use the public cooldown time
+//         animator.SetBool(AnimationStrings.canMove, false); // optional: freeze during attack
+//     }
 
-    if (AttackCooldown > 0f)
-    {
-        AttackCooldown -= Time.deltaTime;
-    }
+//     if (AttackCooldown > 0f)
+//     {
+//         AttackCooldown -= Time.deltaTime;
+//     }
   
 
-}
+// }
 
 
     private void FixedUpdate()

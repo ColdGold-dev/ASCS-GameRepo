@@ -10,6 +10,7 @@ public class DetectionZone : MonoBehaviour
     public UnityEvent playerDetected = new UnityEvent();
     public UnityEvent playerLost= new UnityEvent();
     #endregion
+    public bool IsEmpty => detectedColliders.Count == 0;
 
     #region Detection State
     public List<Collider2D> detectedColliders;
