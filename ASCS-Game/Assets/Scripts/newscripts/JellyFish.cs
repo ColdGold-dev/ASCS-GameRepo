@@ -20,6 +20,8 @@ public class JellyFish : MonoBehaviour
     Damageable damageable;
 
     public enum WalkableDirection { Right, Left }
+    
+public float attackCooldownTime = 2f; // You can edit this in the Inspector
 
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
@@ -76,6 +78,8 @@ public class JellyFish : MonoBehaviour
         }
     }
 
+    //chatgbtaddedforattackcoodedown
+
     public float AttackCooldown
     {
         get
@@ -113,16 +117,27 @@ public class JellyFish : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //has detected target to attack
-        HasTarget = attackZone.detectedColliders.Count > 0;
 
-        if (AttackCooldown > 0)
-        {
-            AttackCooldown -= Time.deltaTime;
-        }
+   
+void Update()
+{
+    HasTarget = attackZone.detectedColliders.Count > 0;
+
+    if (HasTarget && AttackCooldown <= 0f)
+    {
+        animator.SetTrigger("Attack");
+        AttackCooldown = attackCooldownTime; // use the public cooldown time
+        animator.SetBool(AnimationStrings.canMove, false); // optional: freeze during attack
     }
+
+    if (AttackCooldown > 0f)
+    {
+        AttackCooldown -= Time.deltaTime;
+    }
+  
+
+}
+
 
     private void FixedUpdate()
     {
