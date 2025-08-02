@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class squid : MonoBehaviour
 {
     [SerializeField] private DetectionZone detectionZone;
@@ -119,13 +115,8 @@ public float attackCooldownTime = 2f; // You can edit this in the Inspector
     // Update is called once per frame
 
    
-void Update()
-{
-
-
-    Debug.DrawRay(transform.position, walkDirectionVector * 2f, Color.green);
-
-
+// void Update()
+// {
 //     HasTarget = attackZone.detectedColliders.Count > 0;
 
 //     if (HasTarget && AttackCooldown <= 0f)
@@ -141,17 +132,16 @@ void Update()
 //     }
   
 
- }
+// }
 
 
     private void FixedUpdate()
     {
 
-        if ((touchingDirections.IsGrounded && touchingDirections.IsOnWall) || (cliffDetectionZone != null && cliffDetectionZone.IsEmpty))
+        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
         {
-        FlipDirection();
+            FlipDirection();
         }
-
 
         if (!damageable.LockVelocity)
         {

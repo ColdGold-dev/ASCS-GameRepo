@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class PlayerMasterScript : MonoBehaviour
 {
-   public static PlayerMasterScript Instance { get; private set; }
-
+    protected static PlayerMasterScript Instance { get; private set; }
     [Header("GameObject References")]
     [SerializeField] private GameObject playerPrefab; // Reference to the player prefab
 
