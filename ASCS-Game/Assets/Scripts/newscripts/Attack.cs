@@ -8,11 +8,6 @@ public class Attack : MonoBehaviour
     public Vector2 knockback = Vector2.zero;
 
 
-    /// <summary>
-    /// chatgbt change
-    /// </summary>
-  
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Aidans Debug Stuff :)

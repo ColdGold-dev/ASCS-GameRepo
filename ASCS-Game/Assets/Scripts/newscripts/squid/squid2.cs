@@ -1,8 +1,13 @@
 using UnityEngine;
 
-public class squid : MonoBehaviour
+//cha
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
+public class squid2 : MonoBehaviour
 {
     [SerializeField] private DetectionZone detectionZone;
+   
+    // Tracks previous wall state for one-time flips
+private bool wasOnWall = false;
 
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
@@ -16,8 +21,8 @@ public class squid : MonoBehaviour
     Damageable damageable;
 
     public enum WalkableDirection { Right, Left }
-    
-public float attackCooldownTime = 2f; // You can edit this in the Inspector
+
+    public float attackCooldownTime = 2f; // You can edit this in the Inspector
 
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
@@ -76,28 +81,38 @@ public float attackCooldownTime = 2f; // You can edit this in the Inspector
 
     //chatgbtaddedforattackcoodedown
 
-    // public float AttackCooldown
-    // {
-    //     get
-    //     {
-    //         return animator.GetFloat(AnimationStrings.attackCooldown);
-    //     }
-    //     private set
-    //     {
-    //         animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value, 0));
-    //     }
-    // }
-
-    private void Awake()
+    public float AttackCooldown
     {
-        rb = GetComponent<Rigidbody2D>();
-        touchingDirections = GetComponent<TouchingDirections>();
-        animator = GetComponent<Animator>();
-        damageable = GetComponent<Damageable>();
-
-        detectionZone = GetComponentInChildren<DetectionZone>();
-    
+        get
+        {
+            return animator.GetFloat(AnimationStrings.attackCooldown);
+        }
+        private set
+        {
+            animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value, 0));
+        }
     }
+
+ private void Awake()
+{
+    rb = GetComponent<Rigidbody2D>();
+    touchingDirections = GetComponent<TouchingDirections>();
+    animator = GetComponent<Animator>();
+    damageable = GetComponent<Damageable>();
+    detectionZone = GetComponentInChildren<DetectionZone>();
+
+    GroundDetection groundDetection = GetComponentInChildren<GroundDetection>();
+    if (groundDetection != null)
+    {
+        groundDetection.onCliffDetected.AddListener(OnCliffDetected);
+        Debug.Log($"{name}: Subscribed to GroundDetection.onCliffDetected");
+    }
+    else
+    {
+        
+    }
+}
+
     private void OnEnable()
     {
         // Subscribe to events
@@ -114,49 +129,62 @@ public float attackCooldownTime = 2f; // You can edit this in the Inspector
 
     // Update is called once per frame
 
-   
-// void Update()
-// {
-//     HasTarget = attackZone.detectedColliders.Count > 0;
 
-//     if (HasTarget && AttackCooldown <= 0f)
-//     {
-//         animator.SetTrigger("Attack");
-//         AttackCooldown = attackCooldownTime; // use the public cooldown time
-//         animator.SetBool(AnimationStrings.canMove, false); // optional: freeze during attack
-//     }
-
-//     if (AttackCooldown > 0f)
-//     {
-//         AttackCooldown -= Time.deltaTime;
-//     }
-  
-
-// }
-
-
-    private void FixedUpdate()
+    void Update()
     {
+        HasTarget = attackZone.detectedColliders.Count > 0;
 
-        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
+        if (HasTarget && AttackCooldown <= 0f)
         {
-            FlipDirection();
+            animator.SetTrigger("Attack");
+            AttackCooldown = attackCooldownTime; // use the public cooldown time
+            animator.SetBool(AnimationStrings.canMove, false); // optional: freeze during attack
         }
 
-        if (!damageable.LockVelocity)
+        if (AttackCooldown > 0f)
         {
-            if (CanMove && touchingDirections.IsGrounded)
-                // Accelerate towards max Speed
-                rb.linearVelocity = new Vector2(
-                    Mathf.Clamp(rb.linearVelocity.x + (walkAcceleration * walkDirectionVector.x * Time.fixedDeltaTime), -maxSpeed, maxSpeed),
-                    rb.linearVelocity.y);
-            else
-                rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x, 0, walkStopRate), rb.linearVelocity.y);
+            AttackCooldown -= Time.deltaTime;
         }
+
+
     }
 
-    private void FlipDirection()
+private void FixedUpdate()
+{
+    // Flip once when hitting a wall (false → true)
+    if (touchingDirections.IsGrounded && touchingDirections.IsOnWall && !wasOnWall)
     {
+        FlipDirection();
+    }
+
+    // Flip if no ground detected in cliff detection zone
+    if (cliffDetectionZone != null && cliffDetectionZone.detectedColliders.Count == 0)
+    {
+        FlipDirection();
+    }
+
+    // Update previous wall state
+    wasOnWall = touchingDirections.IsOnWall;
+
+    // Movement handling
+    if (!damageable.LockVelocity)
+    {
+        if (CanMove && touchingDirections.IsGrounded)
+        {
+            rb.linearVelocity = new Vector2(
+                Mathf.Clamp(rb.linearVelocity.x + (walkAcceleration * walkDirectionVector.x * Time.fixedDeltaTime), -maxSpeed, maxSpeed),
+                rb.linearVelocity.y);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x, 0, walkStopRate), rb.linearVelocity.y);
+        }
+    }
+}
+
+    public void FlipDirection()
+    {
+            Debug.Log($"{name}: FLIPPING via GroundDetection event");
         if (WalkDirection == WalkableDirection.Right)
         {
             WalkDirection = WalkableDirection.Left;
@@ -167,7 +195,7 @@ public float attackCooldownTime = 2f; // You can edit this in the Inspector
         }
         else
         {
-          //  Debug.LogError("Current walkable direction is not set to legal values of right or left");
+            //  Debug.LogError("Current walkable direction is not set to legal values of right or left");
         }
     }
 
@@ -177,26 +205,30 @@ public float attackCooldownTime = 2f; // You can edit this in the Inspector
         rb.linearVelocity = new Vector2(knockback.x, rb.linearVelocity.y + knockback.y);
     }
 
-    public void OnCliffDetected()
-    {
-        if (touchingDirections.IsGrounded)
-        {
-            FlipDirection();
-        }
-    }
+public void OnCliffDetected()
+{
+    Debug.Log($"{name}: OnCliffDetected() called");
+    FlipDirection();
+}
 
+
+
+
+    
     private void HandlePlayerDetected()
     {
-    //    print("X" + playerPos.x + "Y" + playerPos.y);
+        //    print("X" + playerPos.x + "Y" + playerPos.y);
         walkDirectionVector = (playerPos.x > transform.position.x) ? Vector2.right : Vector2.left;
         //flip direction based on player position
         WalkDirection = (walkDirectionVector == Vector2.right) ? WalkableDirection.Right : WalkableDirection.Left;
-         
+
     }
+
+  
 
     private void HandlePlayerLost()
     {
         //logic to handle when player is lost
     }
-    
+
 }

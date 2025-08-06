@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: d8abd17e6eb1c41e08ac2dd60f1d7db2
+guid: 641069b3f58e9b141baec7e0e97a9601
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6738616051323302208
-    second: Health bar-Sheet_0
-  - first:
-      213: -9217394662892670469
-    second: Health bar-Sheet_1
-  - first:
-      213: 5751626058915631853
-    second: Health bar-Sheet_2
-  - first:
-      213: -2308196995840624354
-    second: Health bar-Sheet_3
-  - first:
-      213: -4778645635441415141
-    second: Health bar-Sheet_4
+      213: -8953506000752247803
+    second: Health bar-Sheet2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -59,11 +47,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Health bar-Sheet_0
+      name: Health bar-Sheet2_0
       rect:
         serializedVersion: 2
         x: 14
         y: 18
-        width: 111
+        width: 109
         height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -127,96 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ce012f6760ab72a0800000000000000
-      internalID: -6738616051323302208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Health bar-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 18
-        width: 111
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf173b3d36c351080800000000000000
-      internalID: -9217394662892670469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Health bar-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 18
-        width: 111
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: de2db8a5d61e1df40800000000000000
-      internalID: 5751626058915631853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Health bar-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 398
-        y: 18
-        width: 111
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e19bb47cf03a7ffd0800000000000000
-      internalID: -2308196995840624354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Health bar-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 526
-        y: 18
-        width: 111
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1c2b08ec17deadb0800000000000000
-      internalID: -4778645635441415141
+      spriteID: 50c75d2eab1ceb380800000000000000
+      internalID: -8953506000752247803
       vertices: []
       indices: 
       edges: []
@@ -235,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Health bar-Sheet_0: -6738616051323302208
-      Health bar-Sheet_1: -9217394662892670469
-      Health bar-Sheet_2: 5751626058915631853
-      Health bar-Sheet_3: -2308196995840624354
-      Health bar-Sheet_4: -4778645635441415141
+      Health bar-Sheet2_0: -8953506000752247803
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

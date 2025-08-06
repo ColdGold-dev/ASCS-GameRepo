@@ -8,10 +8,11 @@ public class Damageable : MonoBehaviour
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
+    
 
     Animator animator;
 
-[SerializeField] private Animator childAnimator;
+    [SerializeField] private Animator childAnimator;
 
 
 
@@ -134,12 +135,12 @@ public class Damageable : MonoBehaviour
             isInvincible = true;
 
             // Notify other subscribed components that the damageable was hit to handle the knockback and such
-           
+
 
             animator.SetTrigger(AnimationStrings.hitTrigger);
             if (childAnimator != null)
             {
-            childAnimator.SetTrigger(AnimationStrings.hitTrigger);
+                childAnimator.SetTrigger(AnimationStrings.hitTrigger);
             }
 
 
@@ -147,7 +148,7 @@ public class Damageable : MonoBehaviour
 
             LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
-           // CharacterEvents.characterDamaged.Invoke(gameObject, damage);
+            CharecterEvents.charecterDamaged.Invoke(gameObject, damage);
 
             return true;
         }
@@ -157,17 +158,18 @@ public class Damageable : MonoBehaviour
     }
 
     // Returns whether the character was healed or not
-    //  public bool Heal(int healthRestore)
-    //  {
-    //       if (IsAlive && Health < MaxHealth)
-    //      {
-    //  int maxHeal = Mathf.Max(MaxHealth - Health, 0);
-    //   int actualHeal = Mathf.Min(maxHeal, healthRestore);
-    //  Health += actualHeal;
-    //  CharacterEvents.characterHealed(gameObject, actualHeal);
+    // public bool Heal(int healthRestore)
+    // {
+    //     if (IsAlive && Health < MaxHealth)
+    //     {
+    //         int maxHeal = Mathf.Max(MaxHealth - Health, 0);
+    //         int actualHeal = Mathf.Min(maxHeal, healthRestore);
+    //         Health += actualHeal;
+    //         CharecterEvents.CharecterHealed(gameObject, actualHeal);
     //         return true;
-    //}
+    //     }
 
-    //return false;
-    //}
+    //     return false;
+    // }
+    
 }

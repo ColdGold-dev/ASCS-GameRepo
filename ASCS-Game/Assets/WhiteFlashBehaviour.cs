@@ -3,7 +3,7 @@ using UnityEngine;
 public class WhiteFlashBehaviour : StateMachineBehaviour
 {
     [SerializeField] private Color flashColor = Color.white;
-    [SerializeField] private float flashDuration = 0.3f;
+    // [SerializeField] private float flashDuration = 0.3f;
 
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
