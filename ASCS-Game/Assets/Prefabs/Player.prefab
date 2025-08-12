@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1606453805986221327}
   - component: {fileID: 3842831014481653044}
   - component: {fileID: 1369371548951569586}
+  - component: {fileID: 4099064842476648952}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -284,6 +285,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e9c554ba-b894-44c7-9f2a-3bd0bf20a6e7
     m_ActionName: 'Player/Jump[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d335d360-8594-4594-be04-20ec185e774f
+    m_ActionName: 'Player/Dash[/Keyboard/shift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -430,6 +435,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flashColor: {r: 1, g: 1, b: 1, a: 1}
   _flashTime: 0.25
+--- !u!114 &4099064842476648952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189980988057241729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8d4d0bf49239841b4355c206a8a496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashingPower: 24
+  dashingTime: 0.2
+  dashingCooldown: 1
+  dashAction: {fileID: -1471910436792827314, guid: ebead47c9d035384d836a936d7417d06, type: 3}
+  trailRenderer: {fileID: 0}
 --- !u!1 &618961978765390703
 GameObject:
   m_ObjectHideFlags: 0
