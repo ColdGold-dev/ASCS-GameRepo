@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: 182bdd643eb4548e9ad871753c902e37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6847865037784924523
+    second: Squid-Sheet-Sheet_0
+  - first:
+      213: 2826880376570173936
+    second: Squid-Sheet-Sheet_1
+  - first:
+      213: -6449254722100046056
+    second: Squid-Sheet-Sheet_2
+  - first:
+      213: 5378243296467203623
+    second: Squid-Sheet-Sheet_3
+  - first:
+      213: 8151780029154255800
+    second: Squid-Sheet-Sheet_4
+  - first:
+      213: -3701413864019205947
+    second: Squid-Sheet-Sheet_5
+  - first:
+      213: -3209397865516738070
+    second: Squid-Sheet-Sheet_6
+  - first:
+      213: -2995231675867918332
+    second: Squid-Sheet-Sheet_7
+  - first:
+      213: -6735262445040819907
+    second: Squid-Sheet-Sheet_8
+  - first:
+      213: -8336240582378817058
+    second: Squid-Sheet-Sheet_9
+  - first:
+      213: 3012699580193332598
+    second: Squid-Sheet-Sheet_10
+  - first:
+      213: 3156658011755507772
+    second: Squid-Sheet-Sheet_11
+  - first:
+      213: -3969908398163552519
+    second: Squid-Sheet-Sheet_12
+  - first:
+      213: -7006121425451754690
+    second: Squid-Sheet-Sheet_13
+  - first:
+      213: 3231449981093678756
+    second: Squid-Sheet-Sheet_14
+  - first:
+      213: 6232814126244913670
+    second: Squid-Sheet-Sheet_15
+  - first:
+      213: 4752693773380285467
+    second: Squid-Sheet-Sheet_16
+  - first:
+      213: 5315184620281689867
+    second: Squid-Sheet-Sheet_17
+  - first:
+      213: 5114711384923410775
+    second: Squid-Sheet-Sheet_18
+  - first:
+      213: -2147438942718921970
+    second: Squid-Sheet-Sheet_19
+  - first:
+      213: -4933812428990810255
+    second: Squid-Sheet-Sheet_20
+  - first:
+      213: -8702608293065500425
+    second: Squid-Sheet-Sheet_21
+  - first:
+      213: 2314921608718820667
+    second: Squid-Sheet-Sheet_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 18
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b61ccf668f0880f50800000000000000
+      internalID: 6847865037784924523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 336
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9dcfb99b81b3720800000000000000
+      internalID: 2826880376570173936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8175737fff4af76a0800000000000000
+      internalID: -6449254722100046056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 272
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726bd8178cb53aa40800000000000000
+      internalID: 5378243296467203623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 272
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3ecdc1fb0f02170800000000000000
+      internalID: 8151780029154255800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 272
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c0ed6c93bfe1acc0800000000000000
+      internalID: -3701413864019205947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 272
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae95afa35ade573d0800000000000000
+      internalID: -3209397865516738070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40015e309acce66d0800000000000000
+      internalID: -2995231675867918332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 208
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31205ebd7a8782a0800000000000000
+      internalID: -6735262445040819907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 208
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed97d1d8b59bf4c80800000000000000
+      internalID: -8336240582378817058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 208
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d54646e424fc920800000000000000
+      internalID: 3012699580193332598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 208
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30f31cacb3becb20800000000000000
+      internalID: 3156658011755507772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 208
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f61f98685d08e8c0800000000000000
+      internalID: -3969908398163552519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bd1befea145ce90800000000000000
+      internalID: -7006121425451754690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae088803aa68dc20800000000000000
+      internalID: 3231449981093678756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6026dd9cc676f7650800000000000000
+      internalID: 6232814126244913670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 144
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14fa885ec5f4f140800000000000000
+      internalID: 4752693773380285467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 144
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b077287404453c940800000000000000
+      internalID: 5315184620281689867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 144
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751910bd7ea1bf640800000000000000
+      internalID: 5114711384923410775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03f562c8a3c232e0800000000000000
+      internalID: -2147438942718921970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177789d7cb3978bb0800000000000000
+      internalID: -4933812428990810255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f85678addf1a3780800000000000000
+      internalID: -8702608293065500425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid-Sheet-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35af8a20f0402020800000000000000
+      internalID: 2314921608718820667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c316bac4d3de0434a9492103099b457d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.30000001192092898,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Squid-Sheet-Sheet_0: 6847865037784924523
+      Squid-Sheet-Sheet_1: 2826880376570173936
+      Squid-Sheet-Sheet_10: 3012699580193332598
+      Squid-Sheet-Sheet_11: 3156658011755507772
+      Squid-Sheet-Sheet_12: -3969908398163552519
+      Squid-Sheet-Sheet_13: -7006121425451754690
+      Squid-Sheet-Sheet_14: 3231449981093678756
+      Squid-Sheet-Sheet_15: 6232814126244913670
+      Squid-Sheet-Sheet_16: 4752693773380285467
+      Squid-Sheet-Sheet_17: 5315184620281689867
+      Squid-Sheet-Sheet_18: 5114711384923410775
+      Squid-Sheet-Sheet_19: -2147438942718921970
+      Squid-Sheet-Sheet_2: -6449254722100046056
+      Squid-Sheet-Sheet_20: -4933812428990810255
+      Squid-Sheet-Sheet_21: -8702608293065500425
+      Squid-Sheet-Sheet_22: 2314921608718820667
+      Squid-Sheet-Sheet_3: 5378243296467203623
+      Squid-Sheet-Sheet_4: 8151780029154255800
+      Squid-Sheet-Sheet_5: -3701413864019205947
+      Squid-Sheet-Sheet_6: -3209397865516738070
+      Squid-Sheet-Sheet_7: -2995231675867918332
+      Squid-Sheet-Sheet_8: -6735262445040819907
+      Squid-Sheet-Sheet_9: -8336240582378817058
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
