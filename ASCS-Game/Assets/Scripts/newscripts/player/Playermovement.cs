@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+ 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class Playermovement : MonoBehaviour
 {
@@ -11,10 +11,13 @@ public class Playermovement : MonoBehaviour
     public float runSpeed = 8f;
     public float airWalkSpeed = 3f;
     public float jumpImpulse = 10f;
+ 
+    // Ranged attack now lives in its own component: PlayerRangedAttack.cs
+ 
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
-
+ 
     public float CurrentMoveSpeed
     {
         get
@@ -51,13 +54,13 @@ public class Playermovement : MonoBehaviour
                 // Movement locked
                 return 0;
             }
-
+ 
         }
     }
-
+ 
     [SerializeField]
     private bool _isMoving = false;
-
+ 
     public bool IsMoving
     {
         get
@@ -70,10 +73,10 @@ public class Playermovement : MonoBehaviour
             animator.SetBool(AnimationStrings.isMoving, value);
         }
     }
-
+ 
     [SerializeField]
     private bool _isRunning = false;
-
+ 
     public bool IsRunning
     {
         get
@@ -86,9 +89,9 @@ public class Playermovement : MonoBehaviour
             animator.SetBool(AnimationStrings.isRunning, value);
         }
     }
-
+ 
     public bool _isFacingRight = true;
-
+ 
     public bool IsFacingRight
     {
         get { return _isFacingRight; }
@@ -100,11 +103,11 @@ public class Playermovement : MonoBehaviour
                 // Flip the local scale to make the player face the opposite directino
                 transform.localScale *= new Vector2(-1, 1);
             }
-
+ 
             _isFacingRight = value;
         }
     }
-
+ 
     public bool CanMove
     {
         get
@@ -112,7 +115,7 @@ public class Playermovement : MonoBehaviour
             return animator.GetBool(AnimationStrings.canMove);
         }
     }
-
+ 
     public bool IsAlive
     {
         get
@@ -120,12 +123,12 @@ public class Playermovement : MonoBehaviour
             return animator.GetBool(AnimationStrings.isAlive);
         }
     }
-
+ 
     Rigidbody2D rb;
     Animator animator;
-
-
-
+ 
+ 
+ 
     //chatgbtfix
     private void Awake()
     {
@@ -133,7 +136,7 @@ public class Playermovement : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
         damageable = GetComponent<Damageable>();
-
+ 
         // Subscribe to damageable hit event
         damageable.damageableHit.AddListener(OnHit);
     }
@@ -141,27 +144,27 @@ public class Playermovement : MonoBehaviour
     {
         if (!damageable.LockVelocity)
             rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
-
+ 
         animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
     }
-
+ 
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-
+ 
         if (IsAlive)
         {
             IsMoving = moveInput != Vector2.zero;
-
+ 
             SetFacingDirection(moveInput);
         }
         else
         {
             IsMoving = false;
         }
-
+ 
     }
-
+ 
     private void SetFacingDirection(Vector2 moveInput)
     {
         if (moveInput.x > 0 && !IsFacingRight)
@@ -175,7 +178,7 @@ public class Playermovement : MonoBehaviour
             IsFacingRight = false;
         }
     }
-
+ 
     public void OnRun(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -187,7 +190,7 @@ public class Playermovement : MonoBehaviour
             IsRunning = false;
         }
     }
-
+ 
     public void OnJump(InputAction.CallbackContext context)
     {
         // TODO Check if alive as well
@@ -197,7 +200,7 @@ public class Playermovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpulse);
         }
     }
-
+ 
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -205,20 +208,13 @@ public class Playermovement : MonoBehaviour
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
     }
-
-   // public void OnRangedAttack(InputAction.CallbackContext context)
-   // {
-   //     if (context.started)
-    //    {
-    //        animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
-   //     }
-  //  }
-
-
+ 
+ 
     ///
     public void OnHit(int damage, Vector2 knockback)
     {
         rb.linearVelocity = new Vector2(-knockback.x, rb.linearVelocity.y + knockback.y);
-
+ 
     }
 }
+ 
