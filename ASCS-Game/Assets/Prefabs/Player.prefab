@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 1369371548951569586}
   - component: {fileID: 4099064842476648952}
   - component: {fileID: 5812192627330106626}
+  - component: {fileID: 5245600902527253169}
+  - component: {fileID: 6419454875727139428}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -118,9 +120,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 1
-  m_AngularDamping: 1
-  m_GravityScale: 4
+  m_LinearDamping: 0
+  m_AngularDamping: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -305,6 +307,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5245600902527253169}
+        m_TargetAssemblyTypeName: PlayerDiveAttack, Assembly-CSharp
+        m_MethodName: OnRangedAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6ff86bc4-f87b-44c5-9003-49bcfd1e579d
     m_ActionName: 'Player/Ranged[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -326,7 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 6
   runSpeed: 7
-  airWalkSpeed: 5
+  airWalkSpeed: 4
   jumpImpulse: 7
   _isMoving: 0
   _isRunning: 0
@@ -465,8 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8d4d0bf49239841b4355c206a8a496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashingPower: 24
-  dashingTime: 0.2
+  dashingPower: 14
+  dashingTime: 0.3
   dashingCooldown: 1
   dashAction: {fileID: -1471910436792827314, guid: ebead47c9d035384d836a936d7417d06, type: 3}
   trailRenderer: {fileID: 0}
@@ -487,6 +501,37 @@ MonoBehaviour:
   upAngle: 12
   downAngle: -35
   speedRange: 10
+--- !u!114 &5245600902527253169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189980988057241729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17b15a8d9202461393f59c29aa5690d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diveSpeed: 20
+  diveDamage: 10
+  diveKnockback: {x: 0, y: 10}
+  hangTime: 0.2
+  bounceImpulse: 7
+--- !u!114 &6419454875727139428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189980988057241729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f75dc29d0aac4f97a5f1851ce603cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parryWindow: 0.7
+  stunDuration: 2
 --- !u!1 &618961978765390703
 GameObject:
   m_ObjectHideFlags: 0

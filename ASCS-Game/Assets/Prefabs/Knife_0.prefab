@@ -129,10 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad9bdcbaae304a1885d8dec6c7109ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 25
   lifetime: 5
   launchDirection: {x: 1, y: 0}
   maxBounces: 1
+  bounceAngleBonus: 20
+  slowdownRate: 50
+  slowdownDuration: 1
 --- !u!61 &8519018557846349846
 BoxCollider2D:
   m_ObjectHideFlags: 0

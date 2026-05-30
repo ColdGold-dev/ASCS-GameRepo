@@ -4,33 +4,35 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    [Header("Normal Hit")]
     public int attackDamage = 10;
     public Vector2 knockback = Vector2.zero;
 
+    [Header("Hit on Stunned Enemy")]
+    [Tooltip("Damage dealt when the target is stunned (parried)")]
+    public int stunnedAttackDamage = 25;
+
+    [Tooltip("Knockback applied when the target is stunned")]
+    public Vector2 stunnedKnockback = new Vector2(8f, 4f);
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Aidans Debug Stuff :)
-       // print(collision.name + " Is in range.");
-     //   Debug.Log($"Attack collided with {collision.name}");
-
-
-        // See if it can be hit
         Damageable damageable = collision.GetComponent<Damageable>();
+        if (damageable == null) return;
 
-        if (damageable != null)
-        {
-            // If parent is facing the left by localscale, our knockback x flips its value to face the left as well
-            Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
+        // Decide which damage / knockback set to use based on stun state
+        int dmg = damageable.IsStunned ? stunnedAttackDamage : attackDamage;
+        Vector2 kb = damageable.IsStunned ? stunnedKnockback : knockback;
 
-            // Hit the target
-            bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
-                Debug.Log("Calling Hit() on: " + damageable.gameObject.name);
+        // Flip knockback X if our parent is facing left
+        Vector2 deliveredKnockback = transform.parent.localScale.x > 0
+            ? kb
+            : new Vector2(-kb.x, kb.y);
 
+        bool gotHit = damageable.Hit(dmg, deliveredKnockback, transform.root.gameObject);
 
-           // if (gotHit)
-            //  Debug.Log(collision.name + " hit for " + attackDamage);
-        }
+        Debug.Log("Calling Hit() on: " + damageable.gameObject.name
+                + " | stunned=" + damageable.IsStunned
+                + " | dmg=" + dmg);
     }
 }
-

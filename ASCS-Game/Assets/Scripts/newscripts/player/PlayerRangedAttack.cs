@@ -16,11 +16,7 @@ public class PlayerRangedAttack : MonoBehaviour
     Rigidbody2D playerRb;
     TouchingDirections touchingDirections;
 
-    // The knife currently in the air. Null when no knife exists.
     GameObject activeKnife;
-
-    // Exposed for PlayerDiveAttack to read.
-    // Unity's null check handles destroyed objects automatically.
     public GameObject ActiveKnife => activeKnife;
 
     private void Awake()
@@ -34,10 +30,6 @@ public class PlayerRangedAttack : MonoBehaviour
     {
         if (!context.started) return;
         if (projectilePrefab == null) return;
-
-        // If a knife is already in the air, this script does nothing.
-        // - If the knife is bounced/armed, PlayerDiveAttack handles the press.
-        // - If the knife isn't armed yet, the press is just ignored (wait for it).
         if (activeKnife != null) return;
 
         ThrowKnife();
@@ -71,8 +63,6 @@ public class PlayerRangedAttack : MonoBehaviour
         }
 
         newProjectile.transform.localScale = new Vector3(horizontal, 1f, 1f);
-
-        // Store the reference so PlayerDiveAttack can find it later
         activeKnife = newProjectile;
     }
 }

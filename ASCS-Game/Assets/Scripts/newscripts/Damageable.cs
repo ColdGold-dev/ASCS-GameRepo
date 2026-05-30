@@ -8,47 +8,26 @@ public class Damageable : MonoBehaviour
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
-    
-
     Animator animator;
-
     [SerializeField] private Animator childAnimator;
-
-
 
     [SerializeField]
     private int _maxHealth = 100;
-
     public int MaxHealth
     {
-        get
-        {
-            return _maxHealth;
-        }
-        set
-        {
-            _maxHealth = value;
-        }
+        get { return _maxHealth; }
+        set { _maxHealth = value; }
     }
-
-
-
 
     [SerializeField]
     private int _health = 100;
-
     public int Health
     {
-        get
-        {
-            return _health;
-        }
+        get { return _health; }
         set
         {
             _health = value;
             healthChanged?.Invoke(_health, MaxHealth);
-
-            // If health drops below 0, character is no longer alive
             if (_health <= 0)
             {
                 IsAlive = false;
@@ -56,27 +35,27 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    private bool _isAlive = true;
-
-    [SerializeField]
-    private bool isInvincible = false;
-
+    [SerializeField] private bool _isAlive = true;
+    [SerializeField] private bool isInvincible = false;
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
+    public bool IsStunned { get; set; } = false;
+
+    // Set by PlayerParry when it stuns this enemy. We call this to break out of
+    // the stun early when a stunned target takes a hit, so the knockback can land.
+    public System.Action OnStunBreak;
+
+    PlayerParry parry;
+
     public bool IsAlive
     {
-        get
-        {
-            return _isAlive;
-        }
+        get { return _isAlive; }
         set
         {
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive set " + value);
-
             if (value == false)
             {
                 damageableDeath.Invoke();
@@ -84,23 +63,16 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    // The velocity should not be changed while this is true but needs to be respected by other physics components like
-    // the player controller
     public bool LockVelocity
     {
-        get
-        {
-            return animator.GetBool(AnimationStrings.lockVelocity);
-        }
-        set
-        {
-            animator.SetBool(AnimationStrings.lockVelocity, value);
-        }
+        get { return animator.GetBool(AnimationStrings.lockVelocity); }
+        set { animator.SetBool(AnimationStrings.lockVelocity, value); }
     }
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        parry = GetComponent<PlayerParry>();
     }
 
     private void Update()
@@ -109,67 +81,53 @@ public class Damageable : MonoBehaviour
         {
             if (timeSinceHit > invincibilityTime)
             {
-                // Remove invincibility
                 isInvincible = false;
                 timeSinceHit = 0;
             }
-
             timeSinceHit += Time.deltaTime;
         }
 
-
-        //chatgbt aded
         if (LockVelocity && timeSinceHit > invincibilityTime)
         {
             LockVelocity = false;
         }
-
     }
 
-    // Returns whether the damageable took damage or not
     public bool Hit(int damage, Vector2 knockback)
     {
+        return Hit(damage, knockback, null);
+    }
+
+    public bool Hit(int damage, Vector2 knockback, GameObject attacker)
+    {
+        // Parry check
+        if (parry != null && parry.IsParrying && attacker != null)
+        {
+            parry.StunAttacker(attacker);
+            return false;
+        }
+
         if (IsAlive && !isInvincible)
         {
+            // If we're hitting a stunned enemy, break their stun first so the
+            // knockback can actually launch them (Kinematic+FreezeAll ignores velocity)
+            if (IsStunned)
+            {
+                OnStunBreak?.Invoke();
+            }
+
             Health -= damage;
             isInvincible = true;
-
-            // Notify other subscribed components that the damageable was hit to handle the knockback and such
-
-
             animator.SetTrigger(AnimationStrings.hitTrigger);
             if (childAnimator != null)
             {
                 childAnimator.SetTrigger(AnimationStrings.hitTrigger);
             }
-
-
-
-
             LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
             CharecterEvents.charecterDamaged.Invoke(gameObject, damage);
-
             return true;
         }
-
-        // Unable to be hit
         return false;
     }
-
-    // Returns whether the character was healed or not
-    // public bool Heal(int healthRestore)
-    // {
-    //     if (IsAlive && Health < MaxHealth)
-    //     {
-    //         int maxHeal = Mathf.Max(MaxHealth - Health, 0);
-    //         int actualHeal = Mathf.Min(maxHeal, healthRestore);
-    //         Health += actualHeal;
-    //         CharecterEvents.CharecterHealed(gameObject, actualHeal);
-    //         return true;
-    //     }
-
-    //     return false;
-    // }
-    
 }
