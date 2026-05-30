@@ -13,11 +13,7 @@ public class Damageable : MonoBehaviour
 
     [SerializeField]
     private int _maxHealth = 100;
-    public int MaxHealth
-    {
-        get { return _maxHealth; }
-        set { _maxHealth = value; }
-    }
+    public int MaxHealth { get { return _maxHealth; } set { _maxHealth = value; } }
 
     [SerializeField]
     private int _health = 100;
@@ -28,10 +24,7 @@ public class Damageable : MonoBehaviour
         {
             _health = value;
             healthChanged?.Invoke(_health, MaxHealth);
-            if (_health <= 0)
-            {
-                IsAlive = false;
-            }
+            if (_health <= 0) IsAlive = false;
         }
     }
 
@@ -40,13 +33,9 @@ public class Damageable : MonoBehaviour
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
+    // True while this enemy is frozen by a parry strike.
+    // Other scripts (like Attack) read this to decide on bonus damage etc.
     public bool IsStunned { get; set; } = false;
-
-    // Set by PlayerParry when it stuns this enemy. We call this to break out of
-    // the stun early when a stunned target takes a hit, so the knockback can land.
-    public System.Action OnStunBreak;
-
-    PlayerParry parry;
 
     public bool IsAlive
     {
@@ -56,10 +45,7 @@ public class Damageable : MonoBehaviour
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive set " + value);
-            if (value == false)
-            {
-                damageableDeath.Invoke();
-            }
+            if (value == false) damageableDeath.Invoke();
         }
     }
 
@@ -72,7 +58,6 @@ public class Damageable : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        parry = GetComponent<PlayerParry>();
     }
 
     private void Update()
@@ -95,34 +80,12 @@ public class Damageable : MonoBehaviour
 
     public bool Hit(int damage, Vector2 knockback)
     {
-        return Hit(damage, knockback, null);
-    }
-
-    public bool Hit(int damage, Vector2 knockback, GameObject attacker)
-    {
-        // Parry check
-        if (parry != null && parry.IsParrying && attacker != null)
-        {
-            parry.StunAttacker(attacker);
-            return false;
-        }
-
         if (IsAlive && !isInvincible)
         {
-            // If we're hitting a stunned enemy, break their stun first so the
-            // knockback can actually launch them (Kinematic+FreezeAll ignores velocity)
-            if (IsStunned)
-            {
-                OnStunBreak?.Invoke();
-            }
-
             Health -= damage;
             isInvincible = true;
             animator.SetTrigger(AnimationStrings.hitTrigger);
-            if (childAnimator != null)
-            {
-                childAnimator.SetTrigger(AnimationStrings.hitTrigger);
-            }
+            if (childAnimator != null) childAnimator.SetTrigger(AnimationStrings.hitTrigger);
             LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
             CharecterEvents.charecterDamaged.Invoke(gameObject, damage);
