@@ -18,56 +18,40 @@ public class WhiteFlashOnHit : MonoBehaviour
         for (int i = 0; i < _spriteRenderers.Length; i++)
         {
             _materials[i] = _spriteRenderers[i].material;
-           
         }
-
         _damageable = GetComponent<Damageable>();
         if (_damageable != null)
         {
             _damageable.damageableHit.AddListener(OnHit);
-        
         }
     }
 
     private void OnHit(int damage, Vector2 knockback)
     {
-       
         StartCoroutine(DamageFlasher());
     }
 
     private IEnumerator DamageFlasher()
     {
-       
-
         for (int i = 0; i < _materials.Length; i++)
         {
             if (_materials[i].HasProperty("_Flash"))
             {
                 _materials[i].SetColor("_Flash", _flashColor);
-              
             }
-          
-
             if (_materials[i].HasProperty("_FlashAmount"))
             {
                 _materials[i].SetFloat("_FlashAmount", 1f);
-               
             }
-           
         }
-
         yield return new WaitForSeconds(_flashTime);
-
         for (int i = 0; i < _materials.Length; i++)
         {
             if (_materials[i].HasProperty("_FlashAmount"))
             {
                 _materials[i].SetFloat("_FlashAmount", 0f);
-               
             }
         }
-
-      
     }
 
     private void OnDestroy()
@@ -75,7 +59,6 @@ public class WhiteFlashOnHit : MonoBehaviour
         if (_damageable != null)
         {
             _damageable.damageableHit.RemoveListener(OnHit);
-          
         }
     }
 }

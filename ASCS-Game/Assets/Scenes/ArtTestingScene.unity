@@ -267,8 +267,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6419454875727139428, guid: 4903e730409979749a8ae6f8142ce523, type: 3}
+      propertyPath: parryDelay
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419454875727139428, guid: 4903e730409979749a8ae6f8142ce523, type: 3}
       propertyPath: parryWindow
-      value: 4
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

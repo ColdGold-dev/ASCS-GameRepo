@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f75dc29d0aac4f97a5f1851ce603cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parryWindow: 2
+  parryWindowObject: {fileID: 0}
   stunDuration: 2
 --- !u!1 &618961978765390703
 GameObject:

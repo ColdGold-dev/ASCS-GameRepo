@@ -33,9 +33,11 @@ public class Damageable : MonoBehaviour
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
-    // True while this enemy is frozen by a parry strike.
-    // Other scripts (like Attack) read this to decide on bonus damage etc.
     public bool IsStunned { get; set; } = false;
+
+    // Set by PlayerParry. Called when a stunned enemy gets hit, to end the freeze
+    // early so the knockback can actually launch them.
+    public System.Action OnStunHit;
 
     public bool IsAlive
     {
@@ -44,7 +46,6 @@ public class Damageable : MonoBehaviour
         {
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
-            Debug.Log("IsAlive set " + value);
             if (value == false) damageableDeath.Invoke();
         }
     }
@@ -82,6 +83,9 @@ public class Damageable : MonoBehaviour
     {
         if (IsAlive && !isInvincible)
         {
+            // Break stun BEFORE applying knockback so the launch can fire
+            if (IsStunned) OnStunHit?.Invoke();
+
             Health -= damage;
             isInvincible = true;
             animator.SetTrigger(AnimationStrings.hitTrigger);

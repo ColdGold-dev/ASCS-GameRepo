@@ -2,27 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Sword/attack hitbox. Lives on a child object of the player or enemy.
-// When it hits a Damageable:
-//   - If our parent (the player) is parrying and the target isn't stunned yet -> STUN them
-//   - If the target is stunned -> bonus damage
-//   - Otherwise -> normal damage
+// Sword/attack hitbox. Lives on a child of player or enemy.
+//
+// Damage rules:
+//   - Hit stunned enemy -> big damage + big knockback (LAUNCH)
+//   - Hit normal enemy  -> small damage + ZERO knockback (no push)
+//
+// Parry rule (player attacks only):
+//   - If the enemy has an active ParryableWindow when we hit, ALSO stun them
 public class Attack : MonoBehaviour
 {
     [Header("Normal Hit")]
-    public int attackDamage = 10;
-    public Vector2 knockback = Vector2.zero;
+    public int attackDamage = 4;
+
+    // No knockback field for normal hits anymore - we always send zero.
+    // Stunned hits still use the bonus knockback below.
 
     [Header("Hit on Stunned Enemy")]
     public int stunnedAttackDamage = 25;
     public Vector2 stunnedKnockback = new Vector2(8f, 4f);
 
-    // Cache reference to the parry script on the parent (if any). Null for enemy attack hitboxes.
     PlayerParry parry;
 
     private void Awake()
     {
-        // Look up the hierarchy for a PlayerParry. Only the player has one.
         parry = GetComponentInParent<PlayerParry>();
     }
 
@@ -31,26 +34,44 @@ public class Attack : MonoBehaviour
         Damageable damageable = collision.GetComponent<Damageable>();
         if (damageable == null) return;
 
-        // CASE 1: Our parent is parrying and this target isn't already stunned -> STUN them
-        if (parry != null && parry.IsParrying && !damageable.IsStunned)
+        int dmg;
+        Vector2 deliveredKnockback;
+
+        if (damageable.IsStunned)
         {
-            parry.StunEnemy(damageable.gameObject);
-            Debug.Log("ATTACK | parry strike on " + damageable.gameObject.name + " - stunning, no damage");
-            return; // no damage on the stun hit
+            // Stunned hit - bonus damage and knockback (flip X based on facing)
+            dmg = stunnedAttackDamage;
+            deliveredKnockback = transform.parent.localScale.x > 0
+                ? stunnedKnockback
+                : new Vector2(-stunnedKnockback.x, stunnedKnockback.y);
         }
-
-        // CASE 2 and 3: Normal hit. Pick damage based on stunned state.
-        int dmg = damageable.IsStunned ? stunnedAttackDamage : attackDamage;
-        Vector2 kb = damageable.IsStunned ? stunnedKnockback : knockback;
-
-        // Flip knockback X based on facing
-        Vector2 deliveredKnockback = transform.parent.localScale.x > 0
-            ? kb
-            : new Vector2(-kb.x, kb.y);
+        else
+        {
+            // Normal hit - small damage, NO knockback
+            dmg = attackDamage;
+            deliveredKnockback = Vector2.zero;
+        }
 
         damageable.Hit(dmg, deliveredKnockback);
 
-        Debug.Log("ATTACK | hit " + damageable.gameObject.name
-                + " | stunned=" + damageable.IsStunned + " | dmg=" + dmg);
+        // Parry check - only relevant if we're the player and target isn't already stunned
+        if (parry != null && !damageable.IsStunned)
+        {
+            if (IsEnemyParryable(damageable.gameObject))
+            {
+                parry.StunEnemy(damageable.gameObject);
+            }
+        }
+    }
+
+    bool IsEnemyParryable(GameObject enemy)
+    {
+        ParryableWindow[] windows = enemy.GetComponentsInChildren<ParryableWindow>(includeInactive: true);
+        foreach (ParryableWindow w in windows)
+        {
+            if (w == null) continue;
+            if (w.gameObject.activeInHierarchy) return true;
+        }
+        return false;
     }
 }

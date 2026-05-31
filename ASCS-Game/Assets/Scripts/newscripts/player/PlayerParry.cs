@@ -1,50 +1,22 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-// Opens a brief "perfect strike" window when Attack is pressed.
-// Attack.cs checks this window when the sword lands on an enemy.
+// Owns the stun behavior. Parry timing is controlled by the enemy's
+// ParryableWindow child GameObject - their attack animation toggles it.
+// Attack.cs checks that and calls StunEnemy on us when appropriate.
 public class PlayerParry : MonoBehaviour
 {
-    [Header("Parry Window")]
-    [Tooltip("How long after pressing Attack the parry window stays active (seconds)")]
-    public float parryWindow = 0.3f;
-
     [Header("Enemy Stun")]
-    [Tooltip("How long an enemy stays frozen when parry-hit")]
     public float stunDuration = 2f;
 
-    public bool IsParrying { get; private set; } = false;
-
-    Coroutine parryWindowRoutine;
-
-    public void OnAttack(InputAction.CallbackContext context)
-    {
-        if (!context.started) return;
-
-        if (parryWindowRoutine != null) StopCoroutine(parryWindowRoutine);
-        parryWindowRoutine = StartCoroutine(OpenParryWindow());
-
-        Debug.Log("PARRY-WINDOW OPENED for " + parryWindow + "s");
-    }
-
-    IEnumerator OpenParryWindow()
-    {
-        IsParrying = true;
-        yield return new WaitForSeconds(parryWindow);
-        IsParrying = false;
-    }
-
-    // Called by Attack.cs when our sword hits an enemy during the parry window.
     public void StunEnemy(GameObject enemy)
     {
         if (enemy == null) return;
 
         Damageable d = enemy.GetComponent<Damageable>();
         if (d == null) return;
-        if (d.IsStunned) return; // already stunned, don't restart
+        if (d.IsStunned) return;
 
-        Debug.Log("PARRY STRIKE! Stunning: " + enemy.name);
         StartCoroutine(StunRoutine(enemy));
     }
 
@@ -55,13 +27,11 @@ public class PlayerParry : MonoBehaviour
 
         Damageable damageable = enemy.GetComponent<Damageable>();
 
-        // Save originals for restore
         RigidbodyType2D originalType = enemyRb.bodyType;
         RigidbodyConstraints2D originalConstraints = enemyRb.constraints;
         Vector3 freezePosition = enemy.transform.position;
 
-        // Disable all behavior scripts (AI, movement, etc.) - keep Damageable
-        // so the enemy can still take hits during the stun.
+        // Disable behavior scripts (keep Damageable enabled so they can still take hits)
         MonoBehaviour[] behaviors = enemy.GetComponentsInChildren<MonoBehaviour>();
         var disabledScripts = new System.Collections.Generic.List<MonoBehaviour>();
         foreach (MonoBehaviour mb in behaviors)
@@ -75,15 +45,47 @@ public class PlayerParry : MonoBehaviour
             }
         }
 
-        if (damageable != null) damageable.IsStunned = true;
+        // Disable enemy attack hitboxes so they can't damage the player during stun
+        Attack[] attackHitboxes = enemy.GetComponentsInChildren<Attack>();
+        var disabledHitboxObjects = new System.Collections.Generic.List<GameObject>();
+        foreach (Attack atk in attackHitboxes)
+        {
+            if (atk == null) continue;
+            if (atk.gameObject.activeSelf)
+            {
+                atk.gameObject.SetActive(false);
+                disabledHitboxObjects.Add(atk.gameObject);
+            }
+        }
 
-        // Force-hold the freeze every physics step.
-        // This wins against any other script trying to move the rigidbody.
+        bool stunBroken = false;
+
+        // Callback registered with Damageable - when the stunned enemy gets hit,
+        // restore physics so the knockback can actually launch them.
+        System.Action breakStun = () =>
+        {
+            if (stunBroken) return;
+            stunBroken = true;
+
+            if (enemyRb != null)
+            {
+                enemyRb.constraints = originalConstraints;
+                enemyRb.bodyType = originalType;
+            }
+        };
+
+        if (damageable != null)
+        {
+            damageable.IsStunned = true;
+            damageable.OnStunHit = breakStun;
+        }
+
         float startTime = Time.time;
-        while (Time.time - startTime < stunDuration)
+        while (Time.time - startTime < stunDuration && !stunBroken)
         {
             if (enemy == null || enemyRb == null) yield break;
 
+            // Re-apply the freeze every physics step to override any script trying to move
             enemyRb.linearVelocity = Vector2.zero;
             enemyRb.angularVelocity = 0f;
             enemyRb.bodyType = RigidbodyType2D.Kinematic;
@@ -93,20 +95,28 @@ public class PlayerParry : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        // Restore everything
-        if (enemyRb != null)
+        // Restore rigidbody if not already done by breakStun
+        if (!stunBroken && enemyRb != null)
         {
             enemyRb.constraints = originalConstraints;
             enemyRb.bodyType = originalType;
         }
 
+        // Re-enable scripts and hitboxes
         foreach (MonoBehaviour mb in disabledScripts)
         {
             if (mb != null) mb.enabled = true;
         }
 
-        if (damageable != null) damageable.IsStunned = false;
+        foreach (GameObject hitbox in disabledHitboxObjects)
+        {
+            if (hitbox != null) hitbox.SetActive(true);
+        }
 
-        Debug.Log("PARRY | stun ended");
+        if (damageable != null)
+        {
+            damageable.IsStunned = false;
+            damageable.OnStunHit = null;
+        }
     }
 }
