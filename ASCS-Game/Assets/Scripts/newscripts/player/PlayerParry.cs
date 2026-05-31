@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-// Owns the stun behavior. Parry timing is controlled by the enemy's
-// ParryableWindow child GameObject - their attack animation toggles it.
-// Attack.cs checks that and calls StunEnemy on us when appropriate.
 public class PlayerParry : MonoBehaviour
 {
     [Header("Enemy Stun")]
     public float stunDuration = 2f;
+
+    [Tooltip("Animator bool name that gets set true while the enemy is stunned. Use this in the animator to transition out of attack states.")]
+    public string stunnedAnimatorBool = "isStunned";
 
     public void StunEnemy(GameObject enemy)
     {
@@ -26,12 +26,13 @@ public class PlayerParry : MonoBehaviour
         if (enemyRb == null) yield break;
 
         Damageable damageable = enemy.GetComponent<Damageable>();
+        Animator enemyAnimator = enemy.GetComponent<Animator>();
 
         RigidbodyType2D originalType = enemyRb.bodyType;
         RigidbodyConstraints2D originalConstraints = enemyRb.constraints;
         Vector3 freezePosition = enemy.transform.position;
 
-        // Disable behavior scripts (keep Damageable enabled so they can still take hits)
+        // Disable behavior scripts (keep Damageable)
         MonoBehaviour[] behaviors = enemy.GetComponentsInChildren<MonoBehaviour>();
         var disabledScripts = new System.Collections.Generic.List<MonoBehaviour>();
         foreach (MonoBehaviour mb in behaviors)
@@ -58,10 +59,15 @@ public class PlayerParry : MonoBehaviour
             }
         }
 
+        // Tell the animator we're stunned. The animator's Any State -> Idle
+        // transition (with isStunned == true) handles snapping out of Attack.
+        if (enemyAnimator != null && !string.IsNullOrEmpty(stunnedAnimatorBool))
+        {
+            enemyAnimator.SetBool(stunnedAnimatorBool, true);
+        }
+
         bool stunBroken = false;
 
-        // Callback registered with Damageable - when the stunned enemy gets hit,
-        // restore physics so the knockback can actually launch them.
         System.Action breakStun = () =>
         {
             if (stunBroken) return;
@@ -85,7 +91,6 @@ public class PlayerParry : MonoBehaviour
         {
             if (enemy == null || enemyRb == null) yield break;
 
-            // Re-apply the freeze every physics step to override any script trying to move
             enemyRb.linearVelocity = Vector2.zero;
             enemyRb.angularVelocity = 0f;
             enemyRb.bodyType = RigidbodyType2D.Kinematic;
@@ -95,14 +100,19 @@ public class PlayerParry : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        // Restore rigidbody if not already done by breakStun
+        // Clear the stun bool so animator can resume normal transitions
+        if (enemyAnimator != null && !string.IsNullOrEmpty(stunnedAnimatorBool))
+        {
+            enemyAnimator.SetBool(stunnedAnimatorBool, false);
+        }
+
+        // Restore rigidbody if not already done
         if (!stunBroken && enemyRb != null)
         {
             enemyRb.constraints = originalConstraints;
             enemyRb.bodyType = originalType;
         }
 
-        // Re-enable scripts and hitboxes
         foreach (MonoBehaviour mb in disabledScripts)
         {
             if (mb != null) mb.enabled = true;

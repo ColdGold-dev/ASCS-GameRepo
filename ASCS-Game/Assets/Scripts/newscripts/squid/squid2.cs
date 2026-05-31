@@ -184,7 +184,7 @@ private void FixedUpdate()
 
     public void FlipDirection()
     {
-            Debug.Log($"{name}: FLIPPING via GroundDetection event");
+          
         if (WalkDirection == WalkableDirection.Right)
         {
             WalkDirection = WalkableDirection.Left;
