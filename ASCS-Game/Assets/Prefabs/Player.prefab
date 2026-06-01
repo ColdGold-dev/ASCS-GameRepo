@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 5812192627330106626}
   - component: {fileID: 5245600902527253169}
   - component: {fileID: 6419454875727139428}
+  - component: {fileID: 1921217918511682191}
+  - component: {fileID: 4008065918925367792}
+  - component: {fileID: 1661239780703360409}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -542,8 +545,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f75dc29d0aac4f97a5f1851ce603cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parryWindowObject: {fileID: 0}
   stunDuration: 2
+  stunnedAnimatorBool: isStunned
+--- !u!114 &1921217918511682191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189980988057241729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a2da15ef0bc4ea88a0c618e7c445e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slotCount: 20
+  slots:
+  - item: {fileID: 0}
+    count: 0
+  - item: {fileID: 0}
+    count: 0
+--- !u!114 &4008065918925367792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189980988057241729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b63cc63e1a891a42abab7790ef2d47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testItem: {fileID: 11400000, guid: e326778cfceac4e12b279d3c4d7ab321, type: 2}
+  inventory: {fileID: 1921217918511682191}
+  playerPrefab: {fileID: 0}
+--- !u!114 &1661239780703360409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189980988057241729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23bb0784c7ca64dcb9a9c6878c6855f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _equippedWeapon: {fileID: 0}
 --- !u!1 &618961978765390703
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +847,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 4
-  knockback: {x: 3, y: 1}
   stunnedAttackDamage: 25
   stunnedKnockback: {x: 8, y: 4}
 --- !u!1 &5170789598965944169
@@ -899,7 +947,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
-  knockback: {x: 0, y: 0}
   stunnedAttackDamage: 25
   stunnedKnockback: {x: 8, y: 4}
 --- !u!1 &5274442242350470598
@@ -1000,7 +1047,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
-  knockback: {x: 0, y: 0}
   stunnedAttackDamage: 25
   stunnedKnockback: {x: 8, y: 4}
 --- !u!1 &6073607382752486421
@@ -1085,9 +1131,9 @@ PolygonCollider2D:
     - - {x: 0.6908972, y: 0.26979578}
       - {x: 0.60064894, y: -0.6390588}
       - {x: -0.07553434, y: -1.1264321}
-      - {x: 0.6847761, y: -1.0940708}
-      - {x: 1.2087953, y: -0.61558765}
-      - {x: 1.1546662, y: -0.09820247}
+      - {x: 0.49078983, y: -1.5305399}
+      - {x: 1.3381194, y: -1.3592017}
+      - {x: 1.4133146, y: 0.22510806}
   m_UseDelaunayMesh: 0
 --- !u!114 &765088737340897115
 MonoBehaviour:
@@ -1102,7 +1148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
-  knockback: {x: 0, y: 0}
   stunnedAttackDamage: 25
   stunnedKnockback: {x: 8, y: 4}
 --- !u!1001 &4601057746921442249

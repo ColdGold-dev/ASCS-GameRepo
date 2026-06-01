@@ -6,7 +6,7 @@ using UnityEngine;
 //
 // Damage rules:
 //   - Hit stunned enemy -> big damage + big knockback (LAUNCH)
-//   - Hit normal enemy  -> small damage + ZERO knockback (no push)
+//   - Hit normal enemy  -> attackDamage + normalKnockback
 //
 // Parry rule (player attacks only):
 //   - If the enemy has an active ParryableWindow when we hit, ALSO stun them
@@ -15,8 +15,10 @@ public class Attack : MonoBehaviour
     [Header("Normal Hit")]
     public int attackDamage = 4;
 
-    // No knockback field for normal hits anymore - we always send zero.
-    // Stunned hits still use the bonus knockback below.
+    [Tooltip("Knockback delivered on normal (non-stunned) hits. " +
+             "Set this to zero on the PLAYER's sword (so player doesn't shove enemies on every swing) " +
+             "and set it to a real value (e.g. 6,2) on ENEMY attack hitboxes (so they push the player back).")]
+    public Vector2 normalKnockback = Vector2.zero;
 
     [Header("Hit on Stunned Enemy")]
     public int stunnedAttackDamage = 25;
@@ -35,26 +37,27 @@ public class Attack : MonoBehaviour
         if (damageable == null) return;
 
         int dmg;
-        Vector2 deliveredKnockback;
+        Vector2 kb;
 
         if (damageable.IsStunned)
         {
-            // Stunned hit - bonus damage and knockback (flip X based on facing)
             dmg = stunnedAttackDamage;
-            deliveredKnockback = transform.parent.localScale.x > 0
-                ? stunnedKnockback
-                : new Vector2(-stunnedKnockback.x, stunnedKnockback.y);
+            kb = stunnedKnockback;
         }
         else
         {
-            // Normal hit - small damage, NO knockback
             dmg = attackDamage;
-            deliveredKnockback = Vector2.zero;
+            kb = normalKnockback;
         }
+
+        // Flip knockback X based on attacker's facing direction
+        Vector2 deliveredKnockback = transform.parent.localScale.x > 0
+            ? kb
+            : new Vector2(-kb.x, kb.y);
 
         damageable.Hit(dmg, deliveredKnockback);
 
-        // Parry check - only relevant if we're the player and target isn't already stunned
+        // Parry check - only relevant if we ARE the player and target isn't already stunned
         if (parry != null && !damageable.IsStunned)
         {
             if (IsEnemyParryable(damageable.gameObject))

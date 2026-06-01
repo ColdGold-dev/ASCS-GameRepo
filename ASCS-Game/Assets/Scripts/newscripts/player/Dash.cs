@@ -8,7 +8,12 @@ public class Dash : MonoBehaviour
     [Header("Dash Settings")]
     public float dashingPower = 24f;
     public float dashingTime = 0.2f;
-    public float dashingCooldown = 1f;
+
+    [Header("Dash Hit (when dashing into an enemy)")]
+    public int dashHitDamage = 25;
+    public Vector2 dashHitKnockback = new Vector2(6f, 4f);
+    [Tooltip("How hard the player bounces up when the dash hits an enemy")]
+    public float dashBounceImpulse = 12f;
 
     [Header("Input")]
     public InputActionReference dashAction;
@@ -17,68 +22,115 @@ public class Dash : MonoBehaviour
     public TrailRenderer trailRenderer;
 
     private Rigidbody2D rb;
-    private bool canDash = true;
+    private Damageable damageable;
     private bool isDashing = false;
 
-private Damageable damageable;
+    // Dash starts locked. PlayerParry grants a charge on parry success.
+    private bool hasDashCharge = false;
 
-private void Awake()
-{
-    rb = GetComponent<Rigidbody2D>();
-    damageable = GetComponent<Damageable>();
-}
+    public bool IsDashing => isDashing;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        damageable = GetComponent<Damageable>();
+    }
 
     private void OnEnable()
     {
-        dashAction.action.performed += OnDash;
-        dashAction.action.Enable();
+        if (dashAction != null)
+        {
+            dashAction.action.performed += OnDash;
+            dashAction.action.Enable();
+        }
     }
 
     private void OnDisable()
     {
-        dashAction.action.performed -= OnDash;
-        dashAction.action.Disable();
+        if (dashAction != null)
+        {
+            dashAction.action.performed -= OnDash;
+            dashAction.action.Disable();
+        }
+    }
+
+    // Called externally (e.g. by PlayerParry when a parry succeeds)
+    public void GrantDashCharge()
+    {
+        hasDashCharge = true;
+        Debug.Log("DASH | charge granted");
     }
 
     private void OnDash(InputAction.CallbackContext context)
     {
-        if (canDash && !isDashing)
+        if (isDashing) return;
+        if (!hasDashCharge)
         {
-            StartCoroutine(PerformDash());
+            Debug.Log("DASH | no charge - dash not allowed");
+            return;
         }
+
+        hasDashCharge = false;
+        StartCoroutine(PerformDash());
     }
 
-   private IEnumerator PerformDash()
-{
-    canDash = false;
-    isDashing = true;
+    private IEnumerator PerformDash()
+    {
+        isDashing = true;
 
-    // Disable gravity and lock velocity updates
-    float originalGravity = rb.gravityScale;
-    rb.gravityScale = 0f;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
 
-    if (damageable != null)
-        damageable.LockVelocity = true;
+        if (damageable != null) damageable.LockVelocity = true;
 
-    float direction = transform.localScale.x > 0 ? 1f : -1f;
-    rb.linearVelocity = new Vector2(direction * dashingPower, 0f);
+        float direction = transform.localScale.x > 0 ? 1f : -1f;
+        rb.linearVelocity = new Vector2(direction * dashingPower, 0f);
 
-    if (trailRenderer != null)
-        trailRenderer.emitting = true;
+        if (trailRenderer != null) trailRenderer.emitting = true;
 
-    yield return new WaitForSeconds(dashingTime);
+        yield return new WaitForSeconds(dashingTime);
 
-    rb.gravityScale = originalGravity;
-    if (trailRenderer != null)
-        trailRenderer.emitting = false;
+        // Restore physics
+        rb.gravityScale = originalGravity;
+        if (trailRenderer != null) trailRenderer.emitting = false;
+        if (damageable != null) damageable.LockVelocity = false;
 
-    isDashing = false;
+        isDashing = false;
+    }
 
-    if (damageable != null)
-        damageable.LockVelocity = false;
+    // Detect dashing-into-enemy hits.
+    // Requires this GameObject (or a child) to have a collider that overlaps with the enemy.
+    // The Player's main Collider2D is usually fine.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!isDashing) return;
+        TryDashHit(collision.gameObject);
+    }
 
-    yield return new WaitForSeconds(dashingCooldown);
-    canDash = true;
-}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!isDashing) return;
+        TryDashHit(collision.gameObject);
+    }
 
+    private void TryDashHit(GameObject other)
+    {
+        Damageable target = other.GetComponentInParent<Damageable>();
+        if (target == null) return;
+        if (target.gameObject == gameObject) return; // don't hit ourselves
+
+        // Deal damage
+        target.Hit(dashHitDamage, dashHitKnockback);
+        Debug.Log("DASH HIT | " + target.gameObject.name + " for " + dashHitDamage);
+
+        // Bounce the player up
+        rb.gravityScale = 1f; // restore gravity so the bounce arcs back down naturally
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x * 0.3f, dashBounceImpulse);
+
+        // End the dash early
+        StopAllCoroutines();
+        if (trailRenderer != null) trailRenderer.emitting = false;
+        if (damageable != null) damageable.LockVelocity = false;
+        isDashing = false;
+    }
 }

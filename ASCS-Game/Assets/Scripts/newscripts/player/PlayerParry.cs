@@ -5,9 +5,17 @@ public class PlayerParry : MonoBehaviour
 {
     [Header("Enemy Stun")]
     public float stunDuration = 2f;
-
-    [Tooltip("Animator bool name that gets set true while the enemy is stunned. Use this in the animator to transition out of attack states.")]
     public string stunnedAnimatorBool = "isStunned";
+
+    [Header("Rewards")]
+    [Tooltip("Optional reference to Dash. On successful parry, grants a dash charge.")]
+    public Dash dash;
+
+    private void Awake()
+    {
+        // Try to auto-find Dash on the same GameObject if not assigned
+        if (dash == null) dash = GetComponent<Dash>();
+    }
 
     public void StunEnemy(GameObject enemy)
     {
@@ -16,6 +24,9 @@ public class PlayerParry : MonoBehaviour
         Damageable d = enemy.GetComponent<Damageable>();
         if (d == null) return;
         if (d.IsStunned) return;
+
+        // Reward: grant a dash charge for this successful parry
+        if (dash != null) dash.GrantDashCharge();
 
         StartCoroutine(StunRoutine(enemy));
     }
@@ -32,7 +43,6 @@ public class PlayerParry : MonoBehaviour
         RigidbodyConstraints2D originalConstraints = enemyRb.constraints;
         Vector3 freezePosition = enemy.transform.position;
 
-        // Disable behavior scripts (keep Damageable)
         MonoBehaviour[] behaviors = enemy.GetComponentsInChildren<MonoBehaviour>();
         var disabledScripts = new System.Collections.Generic.List<MonoBehaviour>();
         foreach (MonoBehaviour mb in behaviors)
@@ -46,7 +56,6 @@ public class PlayerParry : MonoBehaviour
             }
         }
 
-        // Disable enemy attack hitboxes so they can't damage the player during stun
         Attack[] attackHitboxes = enemy.GetComponentsInChildren<Attack>();
         var disabledHitboxObjects = new System.Collections.Generic.List<GameObject>();
         foreach (Attack atk in attackHitboxes)
@@ -59,20 +68,16 @@ public class PlayerParry : MonoBehaviour
             }
         }
 
-        // Tell the animator we're stunned. The animator's Any State -> Idle
-        // transition (with isStunned == true) handles snapping out of Attack.
         if (enemyAnimator != null && !string.IsNullOrEmpty(stunnedAnimatorBool))
         {
             enemyAnimator.SetBool(stunnedAnimatorBool, true);
         }
 
         bool stunBroken = false;
-
         System.Action breakStun = () =>
         {
             if (stunBroken) return;
             stunBroken = true;
-
             if (enemyRb != null)
             {
                 enemyRb.constraints = originalConstraints;
@@ -100,13 +105,11 @@ public class PlayerParry : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        // Clear the stun bool so animator can resume normal transitions
         if (enemyAnimator != null && !string.IsNullOrEmpty(stunnedAnimatorBool))
         {
             enemyAnimator.SetBool(stunnedAnimatorBool, false);
         }
 
-        // Restore rigidbody if not already done
         if (!stunBroken && enemyRb != null)
         {
             enemyRb.constraints = originalConstraints;
