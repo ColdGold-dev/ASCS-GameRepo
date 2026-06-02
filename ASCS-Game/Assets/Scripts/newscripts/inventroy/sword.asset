@@ -15,9 +15,9 @@ MonoBehaviour:
   displayName: New Item
   description: 
   icon: {fileID: 0}
-  stackable: 1
+  stackable: 0
   maxStack: 99
-  itemType: 0
+  itemType: 1
   isUsable: 0
   healAmount: 0
-  weaponDamage: 0
+  weaponDamage: 20

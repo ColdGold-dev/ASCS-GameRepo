@@ -20,8 +20,6 @@ public class squid2 : MonoBehaviour
 
     public enum WalkableDirection { Right, Left }
 
-    public float attackCooldownTime = 2f;
-
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
 
@@ -36,16 +34,9 @@ public class squid2 : MonoBehaviour
             {
                 gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y);
 
-                if (value == WalkableDirection.Right)
-                {
-                    walkDirectionVector = Vector2.right;
-                }
-                else if (value == WalkableDirection.Left)
-                {
-                    walkDirectionVector = Vector2.left;
-                }
+                if (value == WalkableDirection.Right) walkDirectionVector = Vector2.right;
+                else if (value == WalkableDirection.Left) walkDirectionVector = Vector2.left;
             }
-
             _walkDirection = value;
         }
     }
@@ -65,12 +56,6 @@ public class squid2 : MonoBehaviour
     public bool CanMove
     {
         get { return animator.GetBool(AnimationStrings.canMove); }
-    }
-
-    public float AttackCooldown
-    {
-        get { return animator.GetFloat(AnimationStrings.attackCooldown); }
-        private set { animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value, 0)); }
     }
 
     private void Awake()
@@ -102,30 +87,19 @@ public class squid2 : MonoBehaviour
 
     void Update()
     {
+        // Just sync hasTarget with what's in the attack zone.
+        // The animator handles when to attack (via Move -> Attack transition with hasTarget condition).
+        // The cooldown is handled by AttackCooldownBeh on the Attack state.
         HasTarget = attackZone.detectedColliders.Count > 0;
-
-        if (HasTarget && AttackCooldown <= 0f)
-        {
-            animator.SetTrigger("Attack");
-            AttackCooldown = attackCooldownTime;
-            animator.SetBool(AnimationStrings.canMove, false);
-        }
-
-        if (AttackCooldown > 0f)
-        {
-            AttackCooldown -= Time.deltaTime;
-        }
     }
 
     private void FixedUpdate()
     {
-        // Only allow wall flips when grounded (already grounded-gated)
         if (touchingDirections.IsGrounded && touchingDirections.IsOnWall && !wasOnWall)
         {
             FlipDirection();
         }
 
-        // Only allow cliff flips when grounded - mid-air shouldn't trigger this
         if (touchingDirections.IsGrounded && cliffDetectionZone != null && cliffDetectionZone.detectedColliders.Count == 0)
         {
             FlipDirection();
@@ -150,14 +124,8 @@ public class squid2 : MonoBehaviour
 
     public void FlipDirection()
     {
-        if (WalkDirection == WalkableDirection.Right)
-        {
-            WalkDirection = WalkableDirection.Left;
-        }
-        else if (WalkDirection == WalkableDirection.Left)
-        {
-            WalkDirection = WalkableDirection.Right;
-        }
+        if (WalkDirection == WalkableDirection.Right) WalkDirection = WalkableDirection.Left;
+        else if (WalkDirection == WalkableDirection.Left) WalkDirection = WalkableDirection.Right;
     }
 
     public void OnHit(int damage, Vector2 knockback)
@@ -167,15 +135,12 @@ public class squid2 : MonoBehaviour
 
     public void OnCliffDetected()
     {
-        // Only flip on cliff if grounded
         if (!touchingDirections.IsGrounded) return;
         FlipDirection();
     }
 
     private void HandlePlayerDetected()
     {
-        // Only allow direction change toward player when grounded.
-        // Mid-air, the Squid can't suddenly snap to track the player.
         if (!touchingDirections.IsGrounded) return;
 
         walkDirectionVector = (playerPos.x > transform.position.x) ? Vector2.right : Vector2.left;

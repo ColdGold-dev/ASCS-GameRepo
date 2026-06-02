@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 5, y: 0}
+  normalKnockback: {x: 5, y: 4}
   stunnedAttackDamage: 25
   stunnedKnockback: {x: 8, y: 4}
 --- !u!1 &7563820555085985925
