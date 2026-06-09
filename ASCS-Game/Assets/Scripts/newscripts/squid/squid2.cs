@@ -19,6 +19,18 @@ public class squid2 : MonoBehaviour
     Damageable damageable;
 
     public enum WalkableDirection { Right, Left }
+    public enum AttackType { High, Mid, Low }
+
+    [Header("Attack Cooldown (original cooldown - leave alone)")]
+    public float attackCooldownTime = 4f;
+    private float attackCooldown = 0f;
+
+    [Header("Random Attack Timer (separate timer for picking next random attack)")]
+    [Tooltip("Seconds between random attack picks")]
+    public float randomAttackInterval = 3f;
+    private float randomAttackTimer = 0f;
+
+    private AttackType lastAttack;
 
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
@@ -87,10 +99,47 @@ public class squid2 : MonoBehaviour
 
     void Update()
     {
-        // Just sync hasTarget with what's in the attack zone.
-        // The animator handles when to attack (via Move -> Attack transition with hasTarget condition).
-        // The cooldown is handled by AttackCooldownBeh on the Attack state.
+        // Tick BOTH timers
+        if (attackCooldown > 0f) attackCooldown -= Time.deltaTime;
+        if (randomAttackTimer > 0f) randomAttackTimer -= Time.deltaTime;
+
         HasTarget = attackZone.detectedColliders.Count > 0;
+
+        // Use the random attack timer for the new system
+        if (HasTarget && randomAttackTimer <= 0f)
+        {
+            FireRandomAttack();
+            randomAttackTimer = randomAttackInterval; // reset only the random timer
+        }
+    }
+
+    private void FireRandomAttack()
+    {
+        int pick = Random.Range(0, 3);
+
+        if (pick == 0)
+        {
+            lastAttack = AttackType.High;
+            animator.SetTrigger("AttackHigh");
+            Debug.Log("SQUID | fired AttackHigh");
+        }
+        else if (pick == 1)
+        {
+            lastAttack = AttackType.Mid;
+            animator.SetTrigger("AttackMid");
+            Debug.Log("SQUID | fired AttackMid");
+        }
+        else
+        {
+            lastAttack = AttackType.Low;
+            animator.SetTrigger("AttackLow");
+            Debug.Log("SQUID | fired AttackLow");
+        }
+    }
+
+    public AttackType GetLastAttackType()
+    {
+        return lastAttack;
     }
 
     private void FixedUpdate()

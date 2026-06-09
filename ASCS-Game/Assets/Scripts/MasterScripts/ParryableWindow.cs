@@ -1,9 +1,12 @@
 using UnityEngine;
 
-// Marker for "this enemy is currently parryable."
-// Put on a child of the enemy. Their attack animation toggles this GameObject
-// active/inactive during their attack's parryable frames.
-// No code - the GameObject's activeInHierarchy IS the data.
+// Sits on a child GameObject of the enemy.
+// The enemy's attack animation toggles this GameObject active during parryable frames.
+// AttackType identifies which kind of attack this is - the player must use the matching parry direction.
 public class ParryableWindow : MonoBehaviour
 {
+    public enum AttackType { High, Mid, Low }
+
+    [Tooltip("Which parry direction is needed to counter this attack")]
+    public AttackType attackType = AttackType.Mid;
 }

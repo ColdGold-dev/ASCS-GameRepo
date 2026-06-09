@@ -1,0 +1,1264 @@
+fileFormatVersion: 2
+guid: 56e8b4765947241ec8ea2e8a694e3bcd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2558403878011392674
+    second: Squid_0
+  - first:
+      213: 5058714754200643498
+    second: Squid_1
+  - first:
+      213: 5064010493739695828
+    second: Squid_2
+  - first:
+      213: -4455127808109473719
+    second: Squid_3
+  - first:
+      213: -2417776027275446512
+    second: Squid_4
+  - first:
+      213: -8055513565995180255
+    second: Squid_5
+  - first:
+      213: 6179683788212922540
+    second: Squid_6
+  - first:
+      213: -7709183079880045904
+    second: Squid_7
+  - first:
+      213: -8885133484989202604
+    second: Squid_8
+  - first:
+      213: 8323994779207122065
+    second: Squid_9
+  - first:
+      213: 5697706740633575411
+    second: Squid_10
+  - first:
+      213: 6465602053976515064
+    second: Squid_11
+  - first:
+      213: 9022400425250416062
+    second: Squid_12
+  - first:
+      213: 2658998409189200105
+    second: Squid_13
+  - first:
+      213: 2777567234591971993
+    second: Squid_14
+  - first:
+      213: 3939053615626675286
+    second: Squid_15
+  - first:
+      213: -3653306266399546008
+    second: Squid_16
+  - first:
+      213: -6006586779745929604
+    second: Squid_17
+  - first:
+      213: 1622977610683665569
+    second: Squid_18
+  - first:
+      213: 2628496170931200865
+    second: Squid_19
+  - first:
+      213: -4106958705117431072
+    second: Squid_20
+  - first:
+      213: 589848951111809299
+    second: Squid_21
+  - first:
+      213: -8242471026174120784
+    second: Squid_22
+  - first:
+      213: 7775105537269639915
+    second: Squid_23
+  - first:
+      213: -7849219892660594141
+    second: Squid_24
+  - first:
+      213: 2984792976081005583
+    second: Squid_25
+  - first:
+      213: -8717984919630055003
+    second: Squid_26
+  - first:
+      213: -1335075346319227312
+    second: Squid_27
+  - first:
+      213: 4026007830737897625
+    second: Squid_28
+  - first:
+      213: -964199304951481371
+    second: Squid_29
+  - first:
+      213: 733822908997191490
+    second: Squid_30
+  - first:
+      213: -6877774507743988842
+    second: Squid_31
+  - first:
+      213: 1111248175722924483
+    second: Squid_32
+  - first:
+      213: 2307966386850472689
+    second: Squid_33
+  - first:
+      213: -706374300077221722
+    second: Squid_34
+  - first:
+      213: 2872956904540522173
+    second: Squid_35
+  - first:
+      213: -1955922950103231154
+    second: Squid_36
+  - first:
+      213: -4133703194183846708
+    second: Squid_37
+  - first:
+      213: -1412977343591132241
+    second: Squid_38
+  - first:
+      213: 7024038157918060981
+    second: Squid_39
+  - first:
+      213: 2994951667223084386
+    second: Squid_40
+  - first:
+      213: -4703341379260015605
+    second: Squid_41
+  - first:
+      213: 3346273232374449401
+    second: Squid_42
+  - first:
+      213: 4931921008597032940
+    second: Squid_43
+  - first:
+      213: 61704553061756929
+    second: Squid_44
+  - first:
+      213: -2629633685616425519
+    second: Squid_45
+  - first:
+      213: 990880324008592976
+    second: Squid_46
+  - first:
+      213: -3558767475993233202
+    second: Squid_47
+  - first:
+      213: 1576812343206818913
+    second: Squid_48
+  - first:
+      213: 3525066534401917634
+    second: Squid_49
+  - first:
+      213: -2606020511881842156
+    second: Squid_50
+  - first:
+      213: 1999797690982199008
+    second: Squid_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Squid_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 414
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5d262b5a39be7cd0800000000000000
+      internalID: -2558403878011392674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 414
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa72828444a243640800000000000000
+      internalID: 5058714754200643498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de743ab6baf64640800000000000000
+      internalID: 5064010493739695828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 350
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9409ba0ecd43c22c0800000000000000
+      internalID: -4455127808109473719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 350
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017bacb5385527ed0800000000000000
+      internalID: -2417776027275446512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 350
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f54877711153090800000000000000
+      internalID: -8055513565995180255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 350
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca8ebacf9a5a2c550800000000000000
+      internalID: 6179683788212922540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 96
+        height: 63
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba4c4775da730590800000000000000
+      internalID: -7709183079880045904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 286
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f3a4dbb2aa1b480800000000000000
+      internalID: -8885133484989202604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 286
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19cb8d63625c48370800000000000000
+      internalID: 8323994779207122065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 286
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff10d5c712521f40800000000000000
+      internalID: 5697706740633575411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 286
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f16e46dfce6ab950800000000000000
+      internalID: 6465602053976515064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_12
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 286
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb562605261063d70800000000000000
+      internalID: 9022400425250416062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_13
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 286
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e01d0617f8a6e420800000000000000
+      internalID: 2658998409189200105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 286
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a5e950fa6eb8620800000000000000
+      internalID: 2777567234591971993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65465a6b4645aa630800000000000000
+      internalID: 3939053615626675286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865eb878e49dc4dc0800000000000000
+      internalID: -3653306266399546008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76bfa8e52154aca0800000000000000
+      internalID: -6006586779745929604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac463bb989f58610800000000000000
+      internalID: 1622977610683665569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16324d1575b4a7420800000000000000
+      internalID: 2628496170931200865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_20
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eaf64a31d62107c0800000000000000
+      internalID: -4106958705117431072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319f722fe709f2800800000000000000
+      internalID: 589848951111809299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_22
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc217da54cdc9d80800000000000000
+      internalID: -8242471026174120784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_23
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 222
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea2128ba49b6eb60800000000000000
+      internalID: 7775105537269639915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a19063818f11390800000000000000
+      internalID: -7849219892660594141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_25
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 158
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ca36bc56d1c6920800000000000000
+      internalID: 2984792976081005583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_26
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 158
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a9fc3cc7ee730780800000000000000
+      internalID: -8717984919630055003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 056c24acb0cd87de0800000000000000
+      internalID: -1335075346319227312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998c2169ac04fd730800000000000000
+      internalID: 4026007830737897625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb30b737d97e92f0800000000000000
+      internalID: -964199304951481371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_30
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24742da3c001f2a00800000000000000
+      internalID: 733822908997191490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693bea4768c3d80a0800000000000000
+      internalID: -6877774507743988842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_32
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c904430452fb6f00800000000000000
+      internalID: 1111248175722924483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_33
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2a3c1633b870020800000000000000
+      internalID: 2307966386850472689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_34
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a89e6d01547236f0800000000000000
+      internalID: -706374300077221722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 94
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6c426451bced720800000000000000
+      internalID: 2872956904540522173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e451017907a2bd4e0800000000000000
+      internalID: -1955922950103231154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_37
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 30
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc436cf98d222a6c0800000000000000
+      internalID: -4133703194183846708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 30
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3539f9798146ce0800000000000000
+      internalID: -1412977343591132241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 30
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1ce7b5d756a7160800000000000000
+      internalID: 7024038157918060981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_40
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 30
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26dbb446ca4309920800000000000000
+      internalID: 2994951667223084386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_41
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 30
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c9fc75fef5abeb0800000000000000
+      internalID: -4703341379260015605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Squid_42
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 30
+        width: 96
+        height: 64
+      alignment: 9
+      pivot: {x: 0.35, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4c31986c9507e20800000000000000
+      internalID: 3346273232374449401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 871a9687a75a14fbfb2d04b89c3469fe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3499999940395355,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Squid_0: -2558403878011392674
+      Squid_1: 5058714754200643498
+      Squid_10: 5697706740633575411
+      Squid_11: 6465602053976515064
+      Squid_12: 9022400425250416062
+      Squid_13: 2658998409189200105
+      Squid_14: 2777567234591971993
+      Squid_15: 3939053615626675286
+      Squid_16: -3653306266399546008
+      Squid_17: -6006586779745929604
+      Squid_18: 1622977610683665569
+      Squid_19: 2628496170931200865
+      Squid_2: 5064010493739695828
+      Squid_20: -4106958705117431072
+      Squid_21: 589848951111809299
+      Squid_22: -8242471026174120784
+      Squid_23: 7775105537269639915
+      Squid_24: -7849219892660594141
+      Squid_25: 2984792976081005583
+      Squid_26: -8717984919630055003
+      Squid_27: -1335075346319227312
+      Squid_28: 4026007830737897625
+      Squid_29: -964199304951481371
+      Squid_3: -4455127808109473719
+      Squid_30: 733822908997191490
+      Squid_31: -6877774507743988842
+      Squid_32: 1111248175722924483
+      Squid_33: 2307966386850472689
+      Squid_34: -706374300077221722
+      Squid_35: 2872956904540522173
+      Squid_36: -1955922950103231154
+      Squid_37: -4133703194183846708
+      Squid_38: -1412977343591132241
+      Squid_39: 7024038157918060981
+      Squid_4: -2417776027275446512
+      Squid_40: 2994951667223084386
+      Squid_41: -4703341379260015605
+      Squid_42: 3346273232374449401
+      Squid_5: -8055513565995180255
+      Squid_6: 6179683788212922540
+      Squid_7: -7709183079880045904
+      Squid_8: -8885133484989202604
+      Squid_9: 8323994779207122065
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
